@@ -1,3 +1,4 @@
-<?php get_header(); ?>
-
-<?php get_footer(); ?>
+<?php
+/**
+ * Silence is golden
+ */
