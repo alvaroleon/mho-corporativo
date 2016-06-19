@@ -6,11 +6,8 @@ if (have_posts()) the_post();
 
 get_header();
 ?>
-
     <section>
-
         <article>
-
             <div class="banner-principal"><!-- banner-principal -->
                 <div class="container">
                     <div class="three columns">
