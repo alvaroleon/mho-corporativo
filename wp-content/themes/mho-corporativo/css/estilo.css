@@ -414,46 +414,46 @@ article {
   color: #999;
   text-decoration: none;
 }
-body.ambiental .cover-button {
+section.ambiental .cover-button {
   background-color: #006039;
 }
-body.ambiental .cover-button::after {
+section.ambiental .cover-button::after {
   background-color: #006039;
 }
-body.ambiental h1 span {
+section.ambiental h1 span {
   color: #006039;
 }
-body.ambiental .bloque ul li {
+section.ambiental .bloque ul li {
   color: #006039;
 }
-body.vial .banner-principal::after {
+section.vial .banner-principal::after {
   background-color: rgba(234, 85, 12, 0.6);
 }
-body.vial .cover-button {
+section.vial .cover-button {
   background-color: #ea550c;
 }
-body.vial .cover-button::after {
+section.vial .cover-button::after {
   background-color: #ea550c;
 }
-body.vial h1 span {
+section.vial h1 span {
   color: #ea550c;
 }
-body.vial .bloque ul li {
+section.vial .bloque ul li {
   color: #ea550c;
 }
-body.detalle .banner-principal::after {
+section.detalle .banner-principal::after {
   background-color: rgba(0, 86, 138, 0.6);
 }
-body.detalle .cover-button {
+section.detalle .cover-button {
   background-color: #00568a;
 }
-body.detalle .cover-button::after {
+section.detalle .cover-button::after {
   background-color: #00568a;
 }
-body.detalle h1 span {
+section.detalle h1 span {
   color: #00568a;
 }
-body.detalle .bloque ul li {
+section.detalle .bloque ul li {
   color: #00568a;
 }
 .banner-principal {

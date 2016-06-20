@@ -7,7 +7,7 @@ if (have_posts()) the_post();
 get_header();
 ?>
 
-    <section>
+    <section class="ambiental">
 
         <article>
 
