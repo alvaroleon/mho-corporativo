@@ -6,7 +6,7 @@ if (have_posts()) the_post();
 
 get_header();
 ?>
-
+<section>
         <article>
             <div class="container">
                 <div class="twelve columns">
