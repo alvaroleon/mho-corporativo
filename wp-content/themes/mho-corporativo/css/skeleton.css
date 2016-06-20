@@ -124,7 +124,7 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "open_sansregular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "MyriadPro-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
 
 
@@ -170,7 +170,7 @@ input[type="reset"],
 input[type="button"] {
   display: inline-block;
   padding:5px 20px;
-  color: #fd4f00;
+  color: #ee801c;
   text-align: center;
   font-size: 1em;
   font-weight: normal;
@@ -181,7 +181,7 @@ input[type="button"] {
   cursor: pointer;
   box-sizing: border-box;
   text-transform:uppercase;
-  font-family: 'work_sansbold';
+  font-family: 'MyriadPro-Bold';
   transition:all 0.5s;
   -moz-transition:all 0.5s;
   -webkit-transition:all 0.5s;
@@ -204,11 +204,7 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  background-image: url("../images/icon-arrow.png");
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  color: #fd4f00;
-  padding-left: 40px;
+  color: #ee801c;
 }
 .button.button-primary:hover,
 button.button-primary:hover,
@@ -220,7 +216,7 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  color: #fd4f00;
+  color: #ee801c;
   background-color: #fff;
 }
 
@@ -244,7 +240,6 @@ select {
   border-bottom: 1px solid rgba(102,102,102,0.5);
   box-shadow: none;
   box-sizing: border-box;
-    font-family: 'open_sansregular';
     font-size:14px;
     transition:all 0.5s;
     -moz-transition:all 0.5s;
@@ -277,7 +272,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border-color: #fd4f00;
+  border-color: #ee801c;
   outline: 0; }
 label,
 legend {
