@@ -1,6 +1,52 @@
-@media (min-width: 769px) and (max-width: 1000px) {
-
-}
 @media (max-width: 768px) {
-
+  header.fixed h1 {
+    width: 15%;
+  }
+  header h1 {
+    width: 20%;
+  }
+  header nav {
+    display: none;
+  }
+  .principal::before {
+    background-position: center 98%;
+    width: 100%;
+    height: 100%;
+  }
+  .principal::after {
+    width: 100%;
+  }
+  .servicios {
+    padding: 60px 0 0;
+  }
+  .servicios h1 {
+    font-size: 2.3em;
+    text-align: left;
+  }
+  .servicios .button {
+    float: none;
+  }
+  .servicios::before {
+    display: none;
+  }
+  .servicios ul li {
+    float: none;
+  }
+  .servicios ul li a {
+    text-align: center;
+    padding: 10px 20px;
+  }
+  .equipo .current .detalle-equipo h2 {
+    font-size: 1.5em;
+  }
+  .deco-clientes {
+    padding: 0;
+    width: auto;
+  }
+  footer .address-zone::after {
+    display: none;
+  }
+  footer .contact-form {
+    padding: 20px;
+  }
 }
