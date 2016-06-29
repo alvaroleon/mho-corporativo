@@ -1,10 +1,33 @@
 $(document).ready(function() {
 
-    $('.equipo .full-equipo ul li a').click(function(e){
+    $('a.main').on('click', function(){
+        if($(this).hasClass('open')){
+            $('nav').removeClass('open-menu');
+            $(this).removeClass('open');
+            $('body').removeClass('fixed-body');
+        }
+        else{
+            $('nav').addClass('open-menu');
+            $(this).addClass('open');
+            $('body').addClass('fixed-body');
+        }
+    });
+
+    $(".owl-carousel").owlCarousel({
+        items : 9, //10 items above 1000px browser width
+        itemsDesktop : [1000,9], //5 items between 1000px and 901px
+        itemsDesktopSmall : [900,8], // betweem 900px and 601px
+        itemsTablet: [600,4], //2 items between 600 and 0
+        itemsMobile : [600,3], // itemsMobile disabled - inherit from itemsTablet option
+        pagination: true
+    });
+
+    $('.equipo .full-equipo .item a').click(function(e){
         e.preventDefault();
         var tab_id = $(this).attr('data-tab');
         $('.equipo .full-equipo ul li a').removeClass('current');
-        $('.team').hide();
+        $(this).parents('.equipo').find('.team').hide();
+        $(this).parents('.owl-carousel').find('.item').find('a').removeClass('current');
         $(this).addClass('current');
         $("#"+tab_id).fadeIn();
     })

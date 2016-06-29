@@ -1,12 +1,88 @@
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 950px) {
+  body.fixed-body {
+    overflow: hidden;
+  }
   header.fixed h1 {
-    width: 15%;
+    width: 45px;
   }
   header h1 {
-    width: 20%;
+    width: 55px;
+  }
+  header a.main {
+    display: block;
   }
   header nav {
+    background-color: #fff;
+    left: -100%;
+    position: fixed;
+    top: 30px;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  header nav.open-menu {
+    left: 0;
+  }
+  header nav ul li {
+    display: block;
+  }
+  .servicios ul li {
+    margin-right: 2%;
+    text-align: center;
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  body.fixed-body {
+    overflow: hidden;
+  }
+  h1 span {
+    font-size: 1em;
+  }
+  header.fixed h1 {
+    width: 45px;
+  }
+  header h1 {
+    width: 55px;
+  }
+  header a.main {
+    display: block;
+  }
+  header nav {
+    background-color: #fff;
+    left: -100%;
+    position: fixed;
+    top: 30px;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  header nav.open-menu {
+    left: 0;
+  }
+  header nav ul li {
+    display: block;
+  }
+  .banner-principal .cover-button {
+    background-color: transparent;
     display: none;
+  }
+  .banner-principal .cover-button::after {
+    display: none;
+  }
+  .bloque {
+    margin-bottom: 20px;
+  }
+  .principal {
+    margin-bottom: 50px;
   }
   .principal::before {
     background-position: center 98%;

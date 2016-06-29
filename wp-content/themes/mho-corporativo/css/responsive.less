@@ -1,21 +1,118 @@
-@media (min-width: 769px) and (max-width: 1000px) {
-
-}
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 950px) {
+  body{
+    &.fixed-body{
+      overflow: hidden;
+    }
+  }
   header{
     &.fixed{
       h1 {
-        width: 15%;
+        width: 45px;
       }
     }
     h1{
-      width: 20%;
+      width: 55px;
+    }
+    a.main {
+      display: block;
     }
     nav{
-      display: none;
+      background-color: #fff;
+      left: -100%;
+      position: fixed;
+      top: 30px;
+      z-index: 9999;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      &.open-menu{
+        left: 0;
+      }
+      ul{
+        li{
+          display: block;
+          a{
+
+          }
+        }
+      }
     }
   }
+  .servicios{
+    ul{
+      li {
+        margin-right: 2%;
+        text-align: center;
+        width: 30%;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  body{
+    &.fixed-body{
+      overflow: hidden;
+    }
+  }
+  h1{
+    span{
+      font-size: 1em;
+    }
+  }
+  header{
+    &.fixed{
+      h1 {
+        width: 45px;
+      }
+    }
+    h1{
+      width: 55px;
+    }
+    a.main {
+      display: block;
+    }
+    nav{
+      background-color: #fff;
+      left: -100%;
+      position: fixed;
+      top: 30px;
+      z-index: 9999;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      &.open-menu{
+        left: 0;
+      }
+      ul{
+        li{
+          display: block;
+          a{
+
+          }
+        }
+      }
+    }
+  }
+  .banner-principal{
+    .cover-button{
+      background-color: transparent;
+      display: none;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  .bloque{
+    margin-bottom: 20px;
+  }
   .principal{
+    margin-bottom: 50px;
     &::before{
       background-position: center 98%;
       width: 100%;
