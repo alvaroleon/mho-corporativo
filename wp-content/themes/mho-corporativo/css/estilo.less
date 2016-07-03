@@ -400,6 +400,16 @@ article{
                 font-family: "MyriadPro-Regular";
                 margin: 0 0 40px;
             }
+            .button{
+                &:after{
+                    background-color: @brand-color;
+                }
+                &:hover{
+                    border-color: @brand-color;
+                    background-color: @brand-color;
+                    color: #fff;
+                }
+            }
         }
     }
     .full-equipo{
@@ -781,11 +791,25 @@ footer{
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
+    &.ar-vial{
+        color: @color-vial;
+    }
     &.ar-detalle{
         color: @color-detalle;
     }
     &.ar-ambiental{
         color: @color-ambiental;
+    }
+}
+.btn-ar{
+    &.ar-vial:hover{
+        border-color: @color-vial;
+    }
+    &.ar-detalle:hover{
+        border-color: @color-detalle;
+    }
+    &.ar-ambiental:hover{
+        border-color: @color-ambiental;
     }
 }
 .stylish-img{

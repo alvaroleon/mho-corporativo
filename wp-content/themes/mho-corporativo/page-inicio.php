@@ -77,9 +77,9 @@ get_header();
                         </div>
                         <div class="eight columns">
                             <ul class="servicios-list">
-                                <li class="animated"><a href="#" title="Área Vial">Área Vial</a></li>
-                                <li class="animated"><a href="#" title="Área Ambiental">Área Ambiental</a></li>
-                                <li class="animated"><a href="#" title="Área ingenería de detalle">Área ingenería de detalle</a></li>
+                                <li class="animated"><a class="btn-ar ar-vial" href="#" title="Área Vial">Área Vial</a></li>
+                                <li class="animated"><a class="btn-ar ar-ambiental" href="#" title="Área Ambiental">Área Ambiental</a></li>
+                                <li class="animated"><a class="btn-ar ar-detalle" href="#" title="Área ingenería de detalle">Área ingenería de detalle</a></li>
                             </ul>
                         </div>
                     </div>

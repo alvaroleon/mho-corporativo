@@ -370,6 +370,14 @@ article {
   font-family: "MyriadPro-Regular";
   margin: 0 0 40px;
 }
+.equipo .current .detalle-equipo .button:after {
+  background-color: #ee801c;
+}
+.equipo .current .detalle-equipo .button:hover {
+  border-color: #ee801c;
+  background-color: #ee801c;
+  color: #fff;
+}
 .equipo .full-equipo .owl-carousel .item:hover a img {
   transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -704,11 +712,23 @@ footer .address-zone p {
   text-decoration: none;
   text-transform: uppercase;
 }
+.arrow-btn.ar-vial {
+  color: #ee801c;
+}
 .arrow-btn.ar-detalle {
   color: #00568a;
 }
 .arrow-btn.ar-ambiental {
   color: #006039;
+}
+.btn-ar.ar-vial:hover {
+  border-color: #ee801c;
+}
+.btn-ar.ar-detalle:hover {
+  border-color: #00568a;
+}
+.btn-ar.ar-ambiental:hover {
+  border-color: #006039;
 }
 .stylish-img {
   display: inline-block;
