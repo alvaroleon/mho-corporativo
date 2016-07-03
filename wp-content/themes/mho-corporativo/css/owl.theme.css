@@ -4,7 +4,7 @@
 */
 
 .owl-theme .owl-controls{
-    margin-top: -30px;
+    margin-top: 10px;
     position: relative;
     text-align: center;
     z-index: 2;
@@ -23,9 +23,9 @@
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
-	background: #869791;
-	filter: Alpha(Opacity=50);/*IE7 fix*/
-	opacity: 0.5;
+	background: #ee801c;
+	filter: Alpha(Opacity=30);/*IE7 fix*/
+	opacity: 0.3;
 }
 /* Clickable class fix problem with hover on touch devices */
 /* Use it for non-touch hover action */
@@ -52,7 +52,7 @@
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
-	background: #869791;
+	background: #ee801c;
 }
 
 .owl-theme .owl-controls .owl-page.active span,
