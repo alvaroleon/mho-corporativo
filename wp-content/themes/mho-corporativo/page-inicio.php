@@ -298,6 +298,18 @@ get_header();
                         </div>
                     </div><!-- fin full-equipo -->
 
+                    <div class="double-btn-container">
+                        <div class="container">
+                            <div class="six columns">
+                                <a class="arrow-btn ar-detalle" href="#" title="Área Ingeniería de detalle">Área Ingeniería de detalle</a>
+                            </div>
+                            <div class="six columns">
+                                <a class="arrow-btn ar-ambiental" href="#" title="Área ambiental">Área ambiental</a>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </article>
             </div>
         </div>

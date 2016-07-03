@@ -482,6 +482,9 @@ article {
   color: #999;
   text-decoration: none;
 }
+section.ambiental .banner-principal::after {
+  background-color: rgba(0, 96, 57, 0.8);
+}
 section.ambiental .cover-button {
   background-color: #006039;
 }
@@ -495,22 +498,22 @@ section.ambiental .bloque ul li {
   color: #006039;
 }
 section.vial .banner-principal::after {
-  background-color: rgba(234, 85, 12, 0.6);
+  background-color: rgba(238, 128, 28, 0.8);
 }
 section.vial .cover-button {
-  background-color: #ea550c;
+  background-color: #ee801c;
 }
 section.vial .cover-button::after {
-  background-color: #ea550c;
+  background-color: #ee801c;
 }
 section.vial h1 span {
-  color: #ea550c;
+  color: #ee801c;
 }
 section.vial .bloque ul li {
-  color: #ea550c;
+  color: #ee801c;
 }
 section.detalle .banner-principal::after {
-  background-color: rgba(0, 86, 138, 0.6);
+  background-color: rgba(0, 86, 138, 0.8);
 }
 section.detalle .cover-button {
   background-color: #00568a;
@@ -525,13 +528,13 @@ section.detalle .bloque ul li {
   color: #00568a;
 }
 .banner-principal {
-  background: url("../images/bg-ambiental.jpg") no-repeat left top;
+  background: url("../images/bg-principal.jpg") no-repeat left top;
   background-size: cover;
   position: relative;
   padding: 50px 0;
 }
 .banner-principal::after {
-  background-color: rgba(0, 96, 57, 0.6);
+  background-color: rgba(238, 128, 28, 0.8);
   content: "";
   position: absolute;
   top: 0;
@@ -544,11 +547,11 @@ section.detalle .bloque ul li {
   position: static;
 }
 .banner-principal .cover-button {
-  background-color: #006039;
+  background-color: #ee801c;
   padding-top: 170px;
 }
 .banner-principal .cover-button::after {
-  background-color: #006039;
+  background-color: #ee801c;
   position: absolute;
   left: 0;
   content: "";
@@ -693,6 +696,20 @@ footer .address-zone p {
   margin: 0;
 }
 /* ESPECIALES */
+.arrow-btn {
+  border: 1px #ccc solid;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.arrow-btn.ar-detalle {
+  color: #00568a;
+}
+.arrow-btn.ar-ambiental {
+  color: #006039;
+}
 .stylish-img {
   display: inline-block;
   position: relative;

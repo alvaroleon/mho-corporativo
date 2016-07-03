@@ -4,7 +4,7 @@
 @hover-link: @brand-color;
 @hightlight-color: @brand-color;
 @color-ambiental: #006039;
-@color-vial: #ea550c;
+@color-vial: @brand-color;
 @color-detalle: #00568a;
 
 
@@ -527,6 +527,11 @@ article{
     }
 }
 section.ambiental{
+    .banner-principal{
+        &::after{
+            background-color: fade(@color-ambiental, 80%);
+        }
+    }
     .cover-button{
         background-color: @color-ambiental;
         &::after{
@@ -549,7 +554,7 @@ section.ambiental{
 section.vial{
     .banner-principal{
         &::after{
-            background-color: fade(@color-vial, 60%);
+            background-color: fade(@color-vial, 80%);
         }
     }
     .cover-button{
@@ -574,7 +579,7 @@ section.vial{
 section.detalle{
     .banner-principal{
         &::after{
-            background-color: fade(@color-detalle, 60%);
+            background-color: fade(@color-detalle, 80%);
         }
     }
     .cover-button{
@@ -597,12 +602,12 @@ section.detalle{
     }
 }
 .banner-principal{
-    background: url("../images/bg-ambiental.jpg") no-repeat left top;
+    background: url("../images/bg-principal.jpg") no-repeat left top;
     background-size: cover;
     position: relative;
     padding: 50px 0;
     &::after{
-        background-color: fade(@color-ambiental, 60%);
+        background-color: fade(@brand-color, 80%);
         content: "";
         position: absolute;
         top: 0;
@@ -615,10 +620,10 @@ section.detalle{
         position: static;
     }
     .cover-button{
-        background-color: @color-ambiental;
+        background-color: @brand-color;
         padding-top: 170px;
         &::after{
-            background-color: @color-ambiental;
+            background-color: @brand-color;
             position: absolute;
             left: 0;
             content: "";
@@ -769,6 +774,20 @@ footer{
 }
 
 /* ESPECIALES */
+.arrow-btn{
+    border: 1px #ccc solid;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    &.ar-detalle{
+        color: @color-detalle;
+    }
+    &.ar-ambiental{
+        color: @color-ambiental;
+    }
+}
 .stylish-img{
     display: inline-block;
     position: relative;
