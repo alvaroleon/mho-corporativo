@@ -20,3 +20,12 @@ function ajax_remove_logo()
 
 add_action('wp_ajax_remove-logo', 'ajax_remove_logo');
 add_action('wp_ajax_nopriv_remove-logo', 'ajax_remove_logo');
+
+/**
+ * Deja al final el snippet de Yoast
+ */
+function jw_filter_yoast_seo_metabox() {
+    return 'low';
+}
+
+add_filter( 'wpseo_metabox_prio', 'jw_filter_yoast_seo_metabox', 10, 1 );
