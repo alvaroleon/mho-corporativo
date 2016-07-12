@@ -5,7 +5,6 @@ get_header();
 ?>
 
     <section>
-
         <article>
 
             <div class="principal"><!-- principal -->
