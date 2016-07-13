@@ -2,10 +2,12 @@
   body.fixed-body {
     overflow: hidden;
   }
-  header.fixed h1 {
+  header.fixed h1,
+  header.fixed .main-menu {
     width: 45px;
   }
-  header h1 {
+  header h1,
+  header .main-menu {
     width: 55px;
   }
   header a.main {

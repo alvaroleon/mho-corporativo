@@ -94,216 +94,423 @@ get_header();
                             <h1>Nuestro <span>equipo</span></h1>
                         </div>
                     </div>
-                    <div class="current animated">
-                        <div id="tab-1" class="team current"><!-- tab-1 -->
-                            <div class="container">
-                                <div class="six columns">
-                                    <div class="main-equipo"><!-- main-equipo -->
-                                        <div class="stylish-img">
-                                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/mauricio_herrera.jpg" draggable="false" border="0" alt="Mauricio Herrera - Gerente General" />
-                                        </div>
-                                    </div><!-- fin main-equipo -->
+                    <div id="area-vial" class="team-area">
+                        <div class="current animated">
+                            <div id="tab-1" class="team current"><!-- tab-1 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/mauricio_herrera.jpg" draggable="false" border="0" alt="Mauricio Herrera - Gerente General" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Mauricio Herrera</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
                                 </div>
-                                <div class="six columns">
-                                    <div class="detalle-equipo"><!-- detalle-equipo -->
-                                        <h2>Área <span>Vial | Chile</span></h2>
-                                        <h3>Mauricio Herrera</h3>
-                                        <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
-                                        <p>Gerente General</p>
-                                        <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
-                                    </div><!-- fin detalle-equipo -->
+                            </div><!-- fin tab-1 -->
+                            <div id="tab-2" class="team"><!-- tab-2 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-b.jpg" draggable="false" border="0" alt="Catalina Herrera" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-2 -->
+                            <div id="tab-3" class="team"><!-- tab-3 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-c.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-3 -->
+                            <div id="tab-4" class="team"><!-- tab-4 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-d.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-4 -->
+                            <div id="tab-5" class="team"><!-- tab-5 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-e.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-5 -->
+                            <div id="tab-6" class="team"><!-- tab-6 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-f.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-6 -->
+                            <div id="tab-7" class="team"><!-- tab-7 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-g.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-7 -->
+                            <div id="tab-8" class="team"><!-- tab-8 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-h.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-8 -->
+                            <div id="tab-9" class="team"><!-- tab-9 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-i.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-9 -->
+                        </div>
+
+                        <div class="full-equipo"><!-- full-equipo -->
+                            <div class="container">
+                                <div class="twelve columns">
+
+                                    <div id="equipo-cl" class="owl-carousel owl-theme">
+                                        <div class="item"><a href="#" class="current" data-tab="tab-1" title="Mauricio Herrera"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-mauricio.jpg" border="0" draggable="false" alt="Mauricio Herrera" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-2" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-b.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-3" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-c.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-4" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-d.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-5" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-e.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-6" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-f.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-7" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-g.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-8" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-h.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-9" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-i.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                    </div>
+
                                 </div>
                             </div>
-                        </div><!-- fin tab-1 -->
-                        <div id="tab-2" class="team"><!-- tab-2 -->
-                            <div class="container">
-                                <div class="six columns">
-                                    <div class="main-equipo"><!-- main-equipo -->
-                                        <div class="stylish-img">
-                                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-b.jpg" draggable="false" border="0" alt="Catalina Herrera" />
-                                        </div>
-                                    </div><!-- fin main-equipo -->
-                                </div>
-                                <div class="six columns">
-                                    <div class="detalle-equipo"><!-- detalle-equipo -->
-                                        <h2>Área <span>Vial | Chile</span></h2>
-                                        <h3>Nombre</h3>
-                                        <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
-                                        <p>Gerente General</p>
-                                        <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
-                                    </div><!-- fin detalle-equipo -->
-                                </div>
-                            </div>
-                        </div><!-- fin tab-2 -->
-                        <div id="tab-3" class="team"><!-- tab-3 -->
-                            <div class="container">
-                                <div class="six columns">
-                                    <div class="main-equipo"><!-- main-equipo -->
-                                        <div class="stylish-img">
-                                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-c.jpg" draggable="false" border="0" alt="Nombre" />
-                                        </div>
-                                    </div><!-- fin main-equipo -->
-                                </div>
-                                <div class="six columns">
-                                    <div class="detalle-equipo"><!-- detalle-equipo -->
-                                        <h2>Área <span>Vial | Chile</span></h2>
-                                        <h3>Nombre</h3>
-                                        <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
-                                        <p>Gerente General</p>
-                                        <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
-                                    </div><!-- fin detalle-equipo -->
-                                </div>
-                            </div>
-                        </div><!-- fin tab-3 -->
-                        <div id="tab-4" class="team"><!-- tab-4 -->
-                            <div class="container">
-                                <div class="six columns">
-                                    <div class="main-equipo"><!-- main-equipo -->
-                                        <div class="stylish-img">
-                                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-d.jpg" draggable="false" border="0" alt="Nombre" />
-                                        </div>
-                                    </div><!-- fin main-equipo -->
-                                </div>
-                                <div class="six columns">
-                                    <div class="detalle-equipo"><!-- detalle-equipo -->
-                                        <h2>Área <span>Vial | Chile</span></h2>
-                                        <h3>Nombre</h3>
-                                        <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
-                                        <p>Gerente General</p>
-                                        <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
-                                    </div><!-- fin detalle-equipo -->
-                                </div>
-                            </div>
-                        </div><!-- fin tab-4 -->
-                        <div id="tab-5" class="team"><!-- tab-5 -->
-                            <div class="container">
-                                <div class="six columns">
-                                    <div class="main-equipo"><!-- main-equipo -->
-                                        <div class="stylish-img">
-                                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-e.jpg" draggable="false" border="0" alt="Nombre" />
-                                        </div>
-                                    </div><!-- fin main-equipo -->
-                                </div>
-                                <div class="six columns">
-                                    <div class="detalle-equipo"><!-- detalle-equipo -->
-                                        <h2>Área <span>Vial | Chile</span></h2>
-                                        <h3>Nombre</h3>
-                                        <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
-                                        <p>Gerente General</p>
-                                        <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
-                                    </div><!-- fin detalle-equipo -->
-                                </div>
-                            </div>
-                        </div><!-- fin tab-5 -->
-                        <div id="tab-6" class="team"><!-- tab-6 -->
-                            <div class="container">
-                                <div class="six columns">
-                                    <div class="main-equipo"><!-- main-equipo -->
-                                        <div class="stylish-img">
-                                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-f.jpg" draggable="false" border="0" alt="Nombre" />
-                                        </div>
-                                    </div><!-- fin main-equipo -->
-                                </div>
-                                <div class="six columns">
-                                    <div class="detalle-equipo"><!-- detalle-equipo -->
-                                        <h2>Área <span>Vial | Chile</span></h2>
-                                        <h3>Nombre</h3>
-                                        <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
-                                        <p>Gerente General</p>
-                                        <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
-                                    </div><!-- fin detalle-equipo -->
-                                </div>
-                            </div>
-                        </div><!-- fin tab-6 -->
-                        <div id="tab-7" class="team"><!-- tab-7 -->
-                            <div class="container">
-                                <div class="six columns">
-                                    <div class="main-equipo"><!-- main-equipo -->
-                                        <div class="stylish-img">
-                                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-g.jpg" draggable="false" border="0" alt="Nombre" />
-                                        </div>
-                                    </div><!-- fin main-equipo -->
-                                </div>
-                                <div class="six columns">
-                                    <div class="detalle-equipo"><!-- detalle-equipo -->
-                                        <h2>Área <span>Vial | Chile</span></h2>
-                                        <h3>Nombre</h3>
-                                        <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
-                                        <p>Gerente General</p>
-                                        <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
-                                    </div><!-- fin detalle-equipo -->
-                                </div>
-                            </div>
-                        </div><!-- fin tab-7 -->
-                        <div id="tab-8" class="team"><!-- tab-8 -->
-                            <div class="container">
-                                <div class="six columns">
-                                    <div class="main-equipo"><!-- main-equipo -->
-                                        <div class="stylish-img">
-                                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-h.jpg" draggable="false" border="0" alt="Nombre" />
-                                        </div>
-                                    </div><!-- fin main-equipo -->
-                                </div>
-                                <div class="six columns">
-                                    <div class="detalle-equipo"><!-- detalle-equipo -->
-                                        <h2>Área <span>Vial | Chile</span></h2>
-                                        <h3>Nombre</h3>
-                                        <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
-                                        <p>Gerente General</p>
-                                        <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
-                                    </div><!-- fin detalle-equipo -->
-                                </div>
-                            </div>
-                        </div><!-- fin tab-8 -->
-                        <div id="tab-9" class="team"><!-- tab-9 -->
-                            <div class="container">
-                                <div class="six columns">
-                                    <div class="main-equipo"><!-- main-equipo -->
-                                        <div class="stylish-img">
-                                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-i.jpg" draggable="false" border="0" alt="Nombre" />
-                                        </div>
-                                    </div><!-- fin main-equipo -->
-                                </div>
-                                <div class="six columns">
-                                    <div class="detalle-equipo"><!-- detalle-equipo -->
-                                        <h2>Área <span>Vial | Chile</span></h2>
-                                        <h3>Nombre</h3>
-                                        <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
-                                        <p>Gerente General</p>
-                                        <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
-                                    </div><!-- fin detalle-equipo -->
-                                </div>
-                            </div>
-                        </div><!-- fin tab-9 -->
+                        </div><!-- fin full-equipo -->
                     </div>
 
-                    <div class="full-equipo"><!-- full-equipo -->
-                        <div class="container">
-                            <div class="twelve columns">
-
-                                <div id="equipo-cl" class="owl-carousel owl-theme">
-                                    <div class="item"><a href="#" class="current" data-tab="tab-1" title="Mauricio Herrera"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-mauricio.jpg" border="0" draggable="false" alt="Mauricio Herrera" /></a></div>
-                                    <div class="item"><a href="#" data-tab="tab-2" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-b.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
-                                    <div class="item"><a href="#" data-tab="tab-3" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-c.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
-                                    <div class="item"><a href="#" data-tab="tab-4" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-d.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
-                                    <div class="item"><a href="#" data-tab="tab-5" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-e.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
-                                    <div class="item"><a href="#" data-tab="tab-6" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-f.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
-                                    <div class="item"><a href="#" data-tab="tab-7" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-g.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
-                                    <div class="item"><a href="#" data-tab="tab-8" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-h.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
-                                    <div class="item"><a href="#" data-tab="tab-9" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-i.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                    <div id="area-ambiental" class="team-area hide-team">
+                        <div class="current animated">
+                            <div id="tab-1-ambiental" class="team current"><!-- tab-1 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/mauricio_herrera.jpg" draggable="false" border="0" alt="Mauricio Herrera - Gerente General" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Mauricio Herrera</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
                                 </div>
-
-                            </div>
+                            </div><!-- fin tab-1 -->
+                            <div id="tab-2-ambiental" class="team"><!-- tab-2 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-b.jpg" draggable="false" border="0" alt="Catalina Herrera" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-2 -->
+                            <div id="tab-3-ambiental" class="team"><!-- tab-3 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-c.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-3 -->
+                            <div id="tab-4-ambiental" class="team"><!-- tab-4 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-d.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-4 -->
+                            <div id="tab-5-ambiental" class="team"><!-- tab-5 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-e.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-5 -->
+                            <div id="tab-6-ambiental" class="team"><!-- tab-6 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-f.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-6 -->
+                            <div id="tab-7-ambiental" class="team"><!-- tab-7 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-g.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-7 -->
+                            <div id="tab-8-ambiental" class="team"><!-- tab-8 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-h.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-8 -->
+                            <div id="tab-9-ambiental" class="team"><!-- tab-9 -->
+                                <div class="container">
+                                    <div class="six columns">
+                                        <div class="main-equipo"><!-- main-equipo -->
+                                            <div class="stylish-img">
+                                                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-equipo-i.jpg" draggable="false" border="0" alt="Nombre" />
+                                            </div>
+                                        </div><!-- fin main-equipo -->
+                                    </div>
+                                    <div class="six columns">
+                                        <div class="detalle-equipo"><!-- detalle-equipo -->
+                                            <h2>Área <span>Vial | Chile</span></h2>
+                                            <h3>Nombre</h3>
+                                            <h4>Ingeniero Civil en Geografía. Universidad de Santiago de Chile.</h4>
+                                            <p>Gerente General</p>
+                                            <a class="button button-primary" href="#" title="Enviar correo">Enviar correo</a>
+                                        </div><!-- fin detalle-equipo -->
+                                    </div>
+                                </div>
+                            </div><!-- fin tab-9 -->
                         </div>
-                    </div><!-- fin full-equipo -->
+
+                        <div class="full-equipo"><!-- full-equipo -->
+                            <div class="container">
+                                <div class="twelve columns">
+
+                                    <div id="equipo-cl" class="owl-carousel owl-theme">
+                                        <div class="item"><a href="#" class="current" data-tab="tab-1-ambiental" title="Mauricio Herrera"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-mauricio.jpg" border="0" draggable="false" alt="Mauricio Herrera" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-2-ambiental" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-b.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-3-ambiental" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-c.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-4-ambiental" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-d.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-5-ambiental" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-e.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-6-ambiental" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-f.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-7-ambiental" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-g.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-8-ambiental" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-h.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                        <div class="item"><a href="#" data-tab="tab-9-ambiental" title="Catalina Rojas"><img src="<?php bloginfo('template_url') ?>/images/img-full-equipo-i.jpg" border="0" draggable="false" alt="Catalina Rojas" /></a></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div><!-- fin full-equipo -->
+                    </div>
 
                     <div class="double-btn-container">
                         <div class="container">
                             <div class="six columns">
-                                <a class="arrow-btn ar-detalle" href="#" title="Área Ingeniería de detalle">Área Ingeniería de detalle</a>
+                                <a class="arrow-btn ar-detalle" data-slider="area-detalle" href="#" title="Área Ingeniería de detalle">Área Ingeniería de detalle</a>
                             </div>
                             <div class="six columns">
-                                <a class="arrow-btn ar-ambiental" href="#" title="Área ambiental">Área ambiental</a>
+                                <a class="arrow-btn ar-ambiental" data-slider="area-ambiental" href="#" title="Área ambiental">Área ambiental</a>
                             </div>
                         </div>
 

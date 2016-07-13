@@ -124,7 +124,7 @@ header{
                 }
             }
         }
-        h1{
+        h1, .main-menu{
             width: 5%;
         }
     }
@@ -360,6 +360,31 @@ article{
 }
 
 .equipo{
+    .hide-team{
+        display: none;
+    }
+    #area-ambiental{
+        .current{
+            .detalle-equipo{
+                h2{
+                    span{
+                        color: @color-ambiental;
+                    }
+                }
+            }
+        }
+    }
+    #area-vial{
+        .current{
+            .detalle-equipo{
+                h2{
+                    span{
+                        color: @color-vial;
+                    }
+                }
+            }
+        }
+    }
     .current{
         .team{
             display: none;
