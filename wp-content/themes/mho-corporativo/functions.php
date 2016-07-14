@@ -6,25 +6,12 @@ error_reporting(0);
 
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
-//show_admin_bar(false);
-
 add_image_size("equipo_big", 555, 390, true);
 add_image_size("equipo_small", 150, 150, true);
 add_image_size("quienes_somos_big", 494, 339, true);
 add_image_size("alianzas", 240, 220, true);
 add_image_size("servicio_img", 555, 400, true);
 add_image_size("logo_img", 140, 132, false);
-
-/**
- * Eliminar logo de usuario
- */
-function ajax_remove_logo()
-{
-
-}
-
-add_action('wp_ajax_remove-logo', 'ajax_remove_logo');
-add_action('wp_ajax_nopriv_remove-logo', 'ajax_remove_logo');
 
 /**
  * Deja al final el snippet de Yoast
@@ -167,6 +154,11 @@ function get_equipo()
     return $equipo;
 }
 
+/**
+ * Obtiene las Alianzas separado en filas por n columnas
+ * @param int $columns
+ * @return array
+ */
 function get_alianzas($columns = 3)
 {
     $q = new WP_Query([
@@ -199,6 +191,10 @@ function get_alianzas($columns = 3)
     return $alianzas;
 }
 
+/**
+ * Obtiene las áreas
+ * @return array
+ */
 function get_areas() {
     $q = new WP_Query([
         'post_type' => 'servicio',
@@ -219,6 +215,13 @@ function get_areas() {
     return $areas;
 }
 
+/**
+ * Transforma un color de hex a rgb
+ * @param string $hex_str
+ * @param bool $return_as_string
+ * @param string $seperator
+ * @return array|bool|string
+ */
 function hex2rgb($hex_str, $return_as_string = true, $seperator = ',') {
     $hex_str = preg_replace("/[^0-9A-Fa-f]/", '', $hex_str); // Gets a proper hex string
     $rgbArray = array();
@@ -236,3 +239,17 @@ function hex2rgb($hex_str, $return_as_string = true, $seperator = ',') {
     }
     return $return_as_string ? implode($seperator, $rgbArray) : $rgbArray; // returns the rgb string or the associative array
 }
+
+/**
+ * Para ocultar editor en Quienes somos
+ */
+function hide_editor() {
+    $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+    if( !isset( $post_id ) ) return;
+
+    if($post_id == 6){
+        remove_post_type_support('page', 'editor');
+    }
+}
+
+add_action( 'admin_init', 'hide_editor' );
