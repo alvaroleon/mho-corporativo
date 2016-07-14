@@ -199,6 +199,26 @@ function get_alianzas($columns = 3)
     return $alianzas;
 }
 
+function get_areas() {
+    $q = new WP_Query([
+        'post_type' => 'servicio',
+        'showposts' => -1,
+        'orderby' => 'menu_order',
+        'order' => 'asc'
+    ]);
+
+    $areas = [];
+
+    while ($q->have_posts()) {
+        $q->the_post();
+
+        $areas[] = $q->post;
+    }
+    wp_reset_query();
+
+    return $areas;
+}
+
 function hex2rgb($hex_str, $return_as_string = true, $seperator = ',') {
     $hex_str = preg_replace("/[^0-9A-Fa-f]/", '', $hex_str); // Gets a proper hex string
     $rgbArray = array();
