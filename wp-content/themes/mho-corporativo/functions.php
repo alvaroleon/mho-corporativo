@@ -167,7 +167,7 @@ function get_equipo()
     return $equipo;
 }
 
-function get_alianzas()
+function get_alianzas($columns = 3)
 {
     $q = new WP_Query([
         'post_type' => 'alianza',
@@ -188,7 +188,7 @@ function get_alianzas()
             'imagen' => get_the_post_thumbnail_url(null, 'alianzas'),
         ];
 
-        if (($i + 1) % 3 == 0 && $i != 0) { // Se agrupa el array de 3 en 3
+        if (($i + 1) % $columns == 0 && $i != 0) { // Se agrupa el array de $columns en $columns
             $j++;
         }
 
