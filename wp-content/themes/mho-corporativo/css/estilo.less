@@ -124,7 +124,7 @@ header{
                 }
             }
         }
-        h1{
+        h1, .main-menu{
             width: 5%;
         }
     }
@@ -360,6 +360,31 @@ article{
 }
 
 .equipo{
+    .hide-team{
+        display: none;
+    }
+    #area-ambiental{
+        .current{
+            .detalle-equipo{
+                h2{
+                    span{
+                        color: @color-ambiental;
+                    }
+                }
+            }
+        }
+    }
+    #area-vial{
+        .current{
+            .detalle-equipo{
+                h2{
+                    span{
+                        color: @color-vial;
+                    }
+                }
+            }
+        }
+    }
     .current{
         .team{
             display: none;
@@ -666,6 +691,15 @@ ul.list-style{
         list-style: none;
     }
 }
+
+.list-style-wrap {
+    ul {
+        li {
+            list-style: none;
+        }
+    }
+}
+
 .bloque{
     margin-bottom: 100px;
     h2{
@@ -697,7 +731,7 @@ ul.list-style{
                 font-family: "MyriadPro-Bold";
                 font-size: 0.875em;
                 text-decoration: none;
-                &.prev{
+                /*&.prev{
                     background: url("../images/arrow-prev.png") no-repeat left center;
                     padding-left: 30px;
                 }
@@ -707,7 +741,7 @@ ul.list-style{
                     &.ambiental{
                         background-image: url("../images/arrow-next-green.png");
                     }
-                }
+                }*/
             }
         }
     }

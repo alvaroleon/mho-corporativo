@@ -13,6 +13,14 @@ $(document).ready(function() {
         }
     });
 
+    $('.double-btn-container a.arrow-btn').on('click', function(e){
+        e.preventDefault();
+        var slider_id = $(this).attr('data-slider');
+        $('.team-area').hide();
+        $("#"+slider_id).fadeIn();
+        $(this).addClass('open');
+    });
+
     $(".owl-carousel").owlCarousel({
         items : 9, //10 items above 1000px browser width
         itemsDesktop : [1000,9], //5 items between 1000px and 901px

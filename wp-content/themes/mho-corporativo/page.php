@@ -1,14 +1,43 @@
 <?php
 /**
- * Template Name: Página estándar
+ * Template Name: Plantilla de Alianzas
  */
 if (have_posts()) the_post();
 
 get_header();
-?>
 
-<main class="clase-de-seccion">
-    <!-- Código del armado -->
-</main>
+$color_principal = get_field('color_principal');
+$color_principal_rgb = hex2rgb($color_principal);
+$fondo_bajada = get_field('fondo_bajada');
+$fondo_bajada = $fondo_bajada['url'];
+$alianzas = get_alianzas(4);
+?>
+    <style>
+        .banner-principal {
+            background-image: url("<?php echo $fondo_bajada; ?>");
+        }
+
+        .banner-principal::after {
+            background-color: rgba(<?php echo $color_principal_rgb; ?>, 0.8);
+        }
+    </style>
+    <section>
+        <article>
+            <div class="banner-principal"><!-- banner-principal -->
+                <div class="container">
+                    <div class="seven columns">
+                        <h1><?php the_title(); ?></h1>
+                        <?php the_field('bajada'); ?>
+                    </div>
+                </div>
+            </div><!-- fin banner-principal -->
+
+        </article>
+
+        <div class="break">
+            <?php the_content(); ?>
+        </div>
+
+    </section>
 
 <?php get_footer(); ?>
