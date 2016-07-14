@@ -2,20 +2,53 @@
 if (have_posts()) the_post();
 
 get_header();
+
+/**
+ * Capa lógica
+ */
+
+$color_principal = get_field('color_principal');
+$color_principal_rgb = hex2rgb($color_principal);
+$brochure = get_field('brochure');
+$contenido = get_field('contenido')[0];
+$servicios = get_field('servicios');
 ?>
+    <style>
+        section.vial .cover-button::after {
+            background-color: <?php echo $color_principal; ?>
+        }
+
+        section.vial .banner-principal::after {
+            background-color: rgba(<?php echo $color_principal_rgb; ?>, 0.8);
+        }
+
+        section.vial .cover-button {
+            background-color: <?php echo $color_principal; ?>
+        }
+
+        section.vial h1 span {
+            color: <?php echo $color_principal; ?>;
+        }
+
+        section.vial .bloque ul li {
+            color: <?php echo $color_principal; ?>;
+        }
+    </style>
     <section class="vial">
         <article>
             <div class="banner-principal"><!-- banner-principal -->
                 <div class="container">
                     <div class="three columns">
                         <div class="cover-button">
-                            <a class="button button-primary" href="#" title="Descarga nuestro brochure">Descarga nuestro brochure</a>
+                            <?php if ($brochure): ?>
+                                <a class="button button-primary" href="<?php echo $brochure['url']; ?>" target="_blank" title="Descarga nuestro brochure">Descarga nuestro brochure</a>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="seven offset-by-one columns">
                         <div class="">
                             <h1><?php the_title(); ?></h1>
-                            <p>El equipo de especialistas de MHO, ampliamente reconocidos a nivel internacional, reúne experiencia, capacidad operativa y realización de un servicio integral.</p>
+                            <?php echo get_field('bajada'); ?>
                         </div>
                     </div>
                 </div>
@@ -26,106 +59,75 @@ get_header();
         <article>
             <div class="container">
                 <div class="twelve columns">
-                    <h1>Los principales <span>Trabajos que realizamos</span></h1>
+                    <h1><?php echo $contenido['titulo'][0]['texto_superior']; ?>
+                        <span><?php echo $contenido['titulo'][0]['texto_inferior']; ?></span></h1>
                 </div>
             </div>
             <div class="container">
-                <div class="six columns">
-                    <ul class="list-style">
-                        <li>Estudios de Impacto sobre el Sistema de Transporte Urbano (EISTU)</li>
-                        <li>Estudios de Impactos Viales (EIV Niveles I, II y III)</li>
-                        <li>Análisis Vial Básico</li>
-                        <li>Estudios de Demanda</li>
-                        <li>Estudios de Localización</li>
-                        <li>Microsimulaciones de Tráfico</li>
-                        <li>Diseños Viales</li>
-                        <li>Estudios de Accesos</li>
-                        <li>Estudios de Evaluaciones de Proyectos</li>
-                    </ul>
+                <div class="six columns list-style-wrap">
+                    <?php echo $contenido['contenido'][0]['izquierda']; ?>
                 </div>
-                <div class="six columns">
-                    <ul class="list-style">
-                        <li>Elaboración y Gestión de Medidas de Mitigación</li>
-                        <li>Desvíos de Tránsito</li>
-                        <li>Proyectos y Programaciones de Semáforos</li>
-                        <li>Factibilidades de Acceso</li>
-                        <li>Análisis Ex-Post</li>
-                        <li>Estudios de Planes de Monitoreos</li>
-                        <li>Estudios de Seguridad Vial</li>
-                        <li>Mejoramientos de Layout de Estacionamientos</li>
-                    </ul>
+                <div class="six columns list-style-wrap">
+                    <?php echo $contenido['contenido'][0]['derecha']; ?>
                 </div>
             </div>
 
-            <div class="bloque"><!-- bloque1 -->
-                <div class="container">
-                    <div class="six columns">
-                        <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-ambiental.jpg" draggable="false" border="0" alt="Ambiental" />
-                    </div>
-                    <div class="six columns">
-                        <h2>ESTUDIOS DE IMPACTO VIAL</h2>
-                        <p>Los Estudios de Impactos Viales consisten en la aplicación de la metodología promulgada, cuyo objetivo es analizar, identificar y evaluar los diferentes tipos de impactos sobre el área de influencia del estudio, que provocan la localización de actividades relevantes.</p>
-                        <p>Están orientados a lograr las condiciones necesarias, mediante la definición de medidas de mitigación, a fin de que, de un modo sistémico, moderno y transparente, sea posible evitar la generación de impactos negativos en el sistema de transporte, producto de la construcción de proyectos de edificación de magnitud significativa.</p>
-                        <p>Se elaboran diferentes tipos de Estudios de Impactos Viales, según la metodología y el sistema de evaluación.</p>
-                        <ul>
-                            <li>Estudios Viales Básicos (EVB)</li>
-                            <li>Estudios de Impactos sobre el Sistema de Transporte Urbano (EISTU)</li>
-                            <li>Estudios de Impactos Viales para Habilitaciones Urbanas</li>
-                            <li>Estudios de Impactos Viales para Edificaciones (Nivel 2 y Nivel 3)</li>
-                        </ul>
+            <?php foreach ($servicios as $servicio) : ?>
+                <div class="bloque">
+                    <div class="container">
+                        <div class="six columns">
+                            <img class="img-responsive" src="<?php echo $servicio['imagen']['sizes']['servicio_img']; ?>" draggable="false" border="0" alt="<?php echo $servicio['titulo']; ?>">
+                        </div>
+                        <div class="six columns">
+                            <h2><?php echo $servicio['titulo']; ?></h2>
+                            <?php echo $servicio['contenido']; ?>
+                        </div>
                     </div>
                 </div>
-            </div><!-- fin bloque1 -->
-
-
-            <div class="bloque"><!-- bloque2 -->
-                <div class="container">
-                    <div class="six columns">
-                        <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-ambiental.jpg" draggable="false" border="0" alt="Ambiental" />
-                    </div>
-                    <div class="six columns">
-                        <h2>ESTUDIOS DE IMPACTO VIAL</h2>
-                        <p>Los Estudios de Impactos Viales consisten en la aplicación de la metodología promulgada, cuyo objetivo es analizar, identificar y evaluar los diferentes tipos de impactos sobre el área de influencia del estudio, que provocan la localización de actividades relevantes.</p>
-                        <p>Están orientados a lograr las condiciones necesarias, mediante la definición de medidas de mitigación, a fin de que, de un modo sistémico, moderno y transparente, sea posible evitar la generación de impactos negativos en el sistema de transporte, producto de la construcción de proyectos de edificación de magnitud significativa.</p>
-                        <p>Se elaboran diferentes tipos de Estudios de Impactos Viales, según la metodología y el sistema de evaluación.</p>
-                        <ul>
-                            <li>Estudios Viales Básicos (EVB)</li>
-                            <li>Estudios de Impactos sobre el Sistema de Transporte Urbano (EISTU)</li>
-                            <li>Estudios de Impactos Viales para Habilitaciones Urbanas</li>
-                            <li>Estudios de Impactos Viales para Edificaciones (Nivel 2 y Nivel 3)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!-- fin bloque2 -->
-
-            <div class="bloque"><!-- bloque3 -->
-                <div class="container">
-                    <div class="six columns">
-                        <img class="img-responsive" src="<?php bloginfo('template_url') ?>/images/img-ambiental.jpg" draggable="false" border="0" alt="Ambiental" />
-                    </div>
-                    <div class="six columns">
-                        <h2>ESTUDIOS DE IMPACTO VIAL</h2>
-                        <p>Los Estudios de Impactos Viales consisten en la aplicación de la metodología promulgada, cuyo objetivo es analizar, identificar y evaluar los diferentes tipos de impactos sobre el área de influencia del estudio, que provocan la localización de actividades relevantes.</p>
-                        <p>Están orientados a lograr las condiciones necesarias, mediante la definición de medidas de mitigación, a fin de que, de un modo sistémico, moderno y transparente, sea posible evitar la generación de impactos negativos en el sistema de transporte, producto de la construcción de proyectos de edificación de magnitud significativa.</p>
-                        <p>Se elaboran diferentes tipos de Estudios de Impactos Viales, según la metodología y el sistema de evaluación.</p>
-                        <ul>
-                            <li>Estudios Viales Básicos (EVB)</li>
-                            <li>Estudios de Impactos sobre el Sistema de Transporte Urbano (EISTU)</li>
-                            <li>Estudios de Impactos Viales para Habilitaciones Urbanas</li>
-                            <li>Estudios de Impactos Viales para Edificaciones (Nivel 2 y Nivel 3)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!-- fin bloque3 -->
-
+            <?php endforeach; ?>
         </article>
 
+        <?php
+        $q = new WP_Query([
+            'post_type' => 'servicio',
+            'post__not_in' => array(get_the_ID()),
+            'showposts' => 2,
+            'orderby' => 'menu_order'
+        ]);
+        ?>
         <div class="container">
             <div class="twelve columns">
                 <div class="paginador-text">
                     <ul>
-                        <li><a class="prev" href="#" title="Área de ingenería de detalle">Área de ingenería de detalle</a></li>
-                        <li><a class="next green" href="#" title="Área Ambiental">Área Ambiental</a></li>
+                        <?php
+                        $i = 0;
+                        while ($q->have_posts()) :
+                            $q->the_post();
+                            $color_area = get_field('color_principal');
+                            ?>
+                            <li>
+                                <a class="<?php echo $i == 0 ? 'prev' : 'next'; ?>" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                    <?php if ($i == 0) : ?>
+                                        <span>
+                                            <svg width="20px" height="8px">
+                                                <polygon fill="<?php echo $color_area; ?>" points="19.531,4.698 5.448,4.719 6.177,7.469 0,3.828 6.177,0 5.448,2.698 19.531,2.698 ">
+                                            </svg>
+                                        </span>
+                                    <?php endif; ?>
+                                    <?php the_title(); ?>
+                                    <?php if ($i == 1) : ?>
+                                        <span>
+                                            <svg width="20px" height="8px">
+                                                <polygon fill="<?php echo $color_area; ?>" points="0,2.771 14.083,2.75 13.354,0 19.531,3.641 13.354,7.469 14.083,4.771 0,4.771 ">
+                                            </svg>
+                                        </span>
+                                    <?php endif; ?>
+                                </a>
+                            </li>
+                            <?php
+                            $i++;
+                        endwhile;
+                        wp_reset_query(); ?>
                     </ul>
                 </div>
             </div>

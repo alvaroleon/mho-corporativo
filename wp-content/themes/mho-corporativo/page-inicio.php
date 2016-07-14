@@ -196,7 +196,7 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                                 <h1>Nuestros Servicios</h1>
                                 <?php /** @var array $nuestros_servicios */
                                 if ($nuestros_servicios['brochure']) : ?>
-                                    <a class="button button-primary" href="<?php echo $nuestros_servicios['brochure']; ?>" target="_blank" title="Descarga nuestro brochure">Descarga nuestro brochure</a>
+                                    <a class="button button-primary" href="<?php echo $nuestros_servicios['brochure']['url']; ?>" target="_blank" title="Descarga nuestro brochure">Descarga nuestro brochure</a>
                                 <?php endif; ?>
                             </div>
 

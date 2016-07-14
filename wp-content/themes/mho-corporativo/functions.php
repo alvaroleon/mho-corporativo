@@ -12,6 +12,8 @@ add_image_size("equipo_big", 555, 390, true);
 add_image_size("equipo_small", 150, 150, true);
 add_image_size("quienes_somos_big", 494, 339, true);
 add_image_size("alianzas", 240, 220, true);
+add_image_size("servicio_img", 555, 400, true);
+add_image_size("logo_img", 140, 132, false);
 
 /**
  * Eliminar logo de usuario
@@ -195,4 +197,22 @@ function get_alianzas()
     wp_reset_query();
 
     return $alianzas;
+}
+
+function hex2rgb($hex_str, $return_as_string = true, $seperator = ',') {
+    $hex_str = preg_replace("/[^0-9A-Fa-f]/", '', $hex_str); // Gets a proper hex string
+    $rgbArray = array();
+    if (strlen($hex_str) == 6) { //If a proper hex code, convert using bitwise operation. No overhead... faster
+        $colorVal = hexdec($hex_str);
+        $rgbArray['red'] = 0xFF & ($colorVal >> 0x10);
+        $rgbArray['green'] = 0xFF & ($colorVal >> 0x8);
+        $rgbArray['blue'] = 0xFF & $colorVal;
+    } elseif (strlen($hex_str) == 3) { //if shorthand notation, need some string manipulations
+        $rgbArray['red'] = hexdec(str_repeat(substr($hex_str, 0, 1), 2));
+        $rgbArray['green'] = hexdec(str_repeat(substr($hex_str, 1, 1), 2));
+        $rgbArray['blue'] = hexdec(str_repeat(substr($hex_str, 2, 1), 2));
+    } else {
+        return false; //Invalid hex color code
+    }
+    return $return_as_string ? implode($seperator, $rgbArray) : $rgbArray; // returns the rgb string or the associative array
 }
