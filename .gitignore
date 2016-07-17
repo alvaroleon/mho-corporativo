@@ -11,3 +11,4 @@ wp-content/plugins
 wp-content/uploads
 robots.txt
 .idea
+.htaccess
