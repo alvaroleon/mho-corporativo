@@ -105,11 +105,13 @@ header.fixed nav ul li a {
 header.fixed h1,
 header.fixed .main-menu {
   width: 5%;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 header .main-menu {
   float: left;
-  margin: 5px 2% 5px 0;
-  width: 9%;
+  margin: 15px 2% 15px 0;
+  width: 7%;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
