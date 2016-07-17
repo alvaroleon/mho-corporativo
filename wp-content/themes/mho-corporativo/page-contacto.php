@@ -6,6 +6,7 @@ if (have_posts()) the_post();
 
 get_header();
 ?>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1HhCzSEk-fObvREdU1Cr_SR3I5XOLHPg&callback=initialize"></script>
 
     <script type="text/javascript">
         var map;

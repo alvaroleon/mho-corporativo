@@ -45,11 +45,13 @@
   h1 span {
     font-size: 1em;
   }
-  header.fixed h1 {
+  header.fixed h1,
+  header.fixed .main-menu {
     width: 45px;
   }
-  header h1 {
-    width: 55px;
+  header h1,
+  header .main-menu {
+    width: 50px;
   }
   header a.main {
     display: block;
