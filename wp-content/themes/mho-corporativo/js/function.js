@@ -17,7 +17,7 @@ $(document).ready(function() {
     $('.double-btn-container a.arrow-btn').on('click', function(e){
         e.preventDefault();
         var slider_id = $(this).attr('data-slider');
-        $(this).parents('.equipo').hide();
+        $(this).parents('.equipo').find('.team-area').hide();
         $("#"+slider_id).fadeIn();
         $(this).addClass('open');
     });
