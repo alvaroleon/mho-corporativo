@@ -92,7 +92,7 @@ header.fixed {
   position: fixed;
 }
 header.fixed nav {
-  margin-top: 17px;
+  margin-top: 10px;
 }
 header.fixed nav ul li.current-menu-item a {
   padding-bottom: 2px;
