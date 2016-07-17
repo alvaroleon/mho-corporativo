@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-    $('a.main').on('click', function(){
+    $('a.main').on('click', function(e){
+        e.preventDefault();
         if($(this).hasClass('open')){
             $('nav').removeClass('open-menu');
             $(this).removeClass('open');
@@ -16,10 +17,20 @@ $(document).ready(function() {
     $('.double-btn-container a.arrow-btn').on('click', function(e){
         e.preventDefault();
         var slider_id = $(this).attr('data-slider');
-        $('.team-area').hide();
+        $(this).parents('.equipo').find('.team-area').hide();
         $("#"+slider_id).fadeIn();
         $(this).addClass('open');
     });
+
+    jQuery(document).on('change','#selectlocation',function() {
+        var latlngzoom = jQuery(this).val().split('|');
+        var newzoom = 1*latlngzoom[2],
+            newlat = 1*latlngzoom[0],
+            newlng = 1*latlngzoom[1];
+        map.setZoom(newzoom);
+        map.setCenter({lat:newlat, lng:newlng});
+    });
+
 
     $(".owl-carousel").owlCarousel({
         items : 9, //10 items above 1000px browser width
@@ -44,8 +55,8 @@ $(document).ready(function() {
         var sticky = $('header'),
             scroll = $(window).scrollTop();
 
-        if (scroll >= 150) sticky.addClass('fixed');
-        else sticky.removeClass('fixed');
+        if (scroll >= 105) sticky.addClass('fixed'),$('.principal').addClass('paddingTop');
+        else sticky.removeClass('fixed'),$('.principal').removeClass('paddingTop');
 
     });
 
