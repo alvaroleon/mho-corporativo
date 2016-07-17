@@ -644,6 +644,31 @@ ul.list-style li {
 .paginador-text ul li a.next.ambiental {
   background-image: url("../images/arrow-next-green.png");
 }
+.content-map {
+  position: relative;
+}
+.content-map #selectlocation {
+  border: 1px #ee801c solid;
+  color: #333;
+  background-color: #ffffff;
+  left: 10px;
+  position: absolute;
+  top: 60px;
+  width: 220px;
+  z-index: 2;
+}
+.maps-contact {
+  height: 70vh;
+}
+.maps-contact .info_content h3 {
+  color: #ee801c;
+  font-size: 1.2em;
+  line-height: 1em;
+  margin: 0 0 10px;
+}
+.maps-contact .info_content p {
+  margin: 0;
+}
 footer {
   background: url("../images/bg-principal.jpg") no-repeat left top;
   background-size: cover;
@@ -715,6 +740,10 @@ footer .address-zone p {
   margin: 0;
 }
 /* ESPECIALES */
+span.wpcf7-not-valid-tip {
+  font-size: 0.8em;
+  color: red;
+}
 .arrow-btn {
   border: 1px #ccc solid;
   display: block;

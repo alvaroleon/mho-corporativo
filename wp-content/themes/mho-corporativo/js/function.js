@@ -21,6 +21,16 @@ $(document).ready(function() {
         $(this).addClass('open');
     });
 
+    jQuery(document).on('change','#selectlocation',function() {
+        var latlngzoom = jQuery(this).val().split('|');
+        var newzoom = 1*latlngzoom[2],
+            newlat = 1*latlngzoom[0],
+            newlng = 1*latlngzoom[1];
+        map.setZoom(newzoom);
+        map.setCenter({lat:newlat, lng:newlng});
+    });
+
+
     $(".owl-carousel").owlCarousel({
         items : 9, //10 items above 1000px browser width
         itemsDesktop : [1000,9], //5 items between 1000px and 901px

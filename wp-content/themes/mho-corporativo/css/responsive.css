@@ -73,6 +73,9 @@
   header nav ul li {
     display: block;
   }
+  .principal p {
+    padding-left: 0;
+  }
   .banner-principal .cover-button {
     background-color: transparent;
     display: none;
