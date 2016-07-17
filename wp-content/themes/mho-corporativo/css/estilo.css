@@ -70,6 +70,9 @@ h5 {
 h6 {
   font-size: 1.5rem;
 }
+a {
+  outline: none;
+}
 a:hover {
   color: #ee801c;
 }
@@ -165,8 +168,10 @@ header nav ul {
 header nav ul li {
   display: table-cell;
   list-style: none;
+  position: relative;
 }
-header nav ul li.current-menu-item a {
+header nav ul li.current-menu-item a,
+header nav ul li.current_page_ancestor a {
   border-top: 1px #ee801c solid;
   border-bottom: 1px #ee801c solid;
   padding-top: 10px;
@@ -184,6 +189,26 @@ header nav ul li a {
   color: #8f9193;
   text-transform: uppercase;
   text-align: center;
+}
+header nav ul li:hover .sub-menu {
+  display: block;
+}
+header nav ul.sub-menu {
+  background-color: #fff;
+  bottom: -91%;
+  display: none;
+  position: absolute;
+}
+header nav ul.sub-menu li {
+  display: block;
+  margin: 0;
+}
+header nav ul.sub-menu li a {
+  border: none;
+}
+header nav ul.sub-menu li a:hover {
+  background-color: #ee801c;
+  color: #fff;
 }
 article {
   margin-bottom: 50px;
@@ -229,6 +254,9 @@ article {
   bottom: -10px;
   right: 0;
   z-index: 1;
+}
+.principal.paddingTop {
+  padding-top: 100px;
 }
 .principal h1,
 .principal p,
@@ -411,6 +439,16 @@ article {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
+}
+.clientes h2 {
+  font-size: 2em;
+}
+.clientes .item-cliente {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.clientes .item-cliente .img-responsive {
+  margin: 0 auto;
 }
 .banner-clientes {
   background: url("../images/bg-principal.jpg") no-repeat left top;
@@ -599,6 +637,17 @@ section.detalle .bloque ul li {
 }
 ul.list-style li {
   list-style: none;
+  position: relative;
+  padding-left: 18px;
+}
+ul.list-style li::before {
+  color: #222;
+  content: "■";
+  font-size: 12px;
+  left: 0;
+  line-height: 13px;
+  position: absolute;
+  top: 5px;
 }
 .bloque {
   margin-bottom: 100px;

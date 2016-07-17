@@ -90,6 +90,9 @@ h3 { font-size: 3em; }
 h4 { font-size: 2.4rem; }
 h5 { font-size: 1.8rem; }
 h6 { font-size: 1.5rem; }
+a{
+    outline: none;
+}
 a:hover {
     color: @hover-link;
 }
@@ -191,7 +194,8 @@ header{
             li{
                 display: table-cell;
                 list-style: none;
-                &.current-menu-item{
+                position: relative;
+                &.current-menu-item, &.current_page_ancestor{
                     a{
                         border-top: 1px @brand-color solid;
                         border-bottom: 1px @brand-color solid;
@@ -211,6 +215,28 @@ header{
                     color: #8f9193;
                     text-transform: uppercase;
                     text-align: center;
+                }
+                &:hover{
+                    .sub-menu{
+                        display: block;
+                    }
+                }
+            }
+            &.sub-menu{
+                background-color: #fff;
+                bottom: -91%;
+                display: none;
+                position: absolute;
+                li{
+                    display: block;
+                    margin: 0;
+                    a{
+                        border: none;
+                        &:hover{
+                            background-color: @brand-color;
+                            color: #fff;
+                        }
+                    }
                 }
             }
         }
@@ -259,6 +285,9 @@ article{
         bottom: -10px;
         right: 0;
         z-index: 1;
+    }
+    &.paddingTop{
+        padding-top: 100px;
     }
     h1, p, span, .button{
         color: #fff;
@@ -470,7 +499,18 @@ article{
         }
     }
 }
-
+.clientes{
+    h2{
+        font-size: 2em;
+    }
+    .item-cliente{
+        text-align: center;
+        margin-bottom: 50px;
+        .img-responsive{
+            margin: 0 auto;
+        }
+    }
+}
 .banner-clientes{
     background: url("../images/bg-principal.jpg") no-repeat left top;
     background-size: cover;
@@ -689,6 +729,17 @@ section.detalle{
 ul.list-style{
     li{
         list-style: none;
+        position: relative;
+        padding-left: 18px;
+        &::before{
+            color: #222;
+            content: "■";
+            font-size: 12px;
+            left: 0;
+            line-height: 13px;
+            position: absolute;
+            top: 5px;
+        }
     }
 }
 .bloque{

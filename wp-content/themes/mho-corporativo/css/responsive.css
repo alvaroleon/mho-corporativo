@@ -58,13 +58,14 @@
   }
   header nav {
     background-color: #fff;
+    bottom: 0;
     left: -100%;
     position: fixed;
     top: 30px;
     z-index: 9999;
     width: 100%;
-    height: 100vh;
     overflow: hidden;
+    overflow-y: auto;
     transition: all 0.5s;
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -74,6 +75,10 @@
   }
   header nav ul li {
     display: block;
+  }
+  header nav ul.sub-menu {
+    display: block;
+    position: static;
   }
   .principal p {
     padding-left: 0;

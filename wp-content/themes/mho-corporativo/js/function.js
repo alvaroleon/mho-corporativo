@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-    $('a.main').on('click', function(){
+    $('a.main').on('click', function(e){
+        e.preventDefault();
         if($(this).hasClass('open')){
             $('nav').removeClass('open-menu');
             $(this).removeClass('open');
@@ -54,8 +55,8 @@ $(document).ready(function() {
         var sticky = $('header'),
             scroll = $(window).scrollTop();
 
-        if (scroll >= 150) sticky.addClass('fixed');
-        else sticky.removeClass('fixed');
+        if (scroll >= 105) sticky.addClass('fixed'),$('.principal').addClass('paddingTop');
+        else sticky.removeClass('fixed'),$('.principal').removeClass('paddingTop');
 
     });
 
