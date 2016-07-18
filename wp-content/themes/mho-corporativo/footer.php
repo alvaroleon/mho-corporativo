@@ -1,3 +1,6 @@
+<?php
+$contactos = get_field('datos', 18);
+?>
 <footer>
     <div class="container">
         <div class="container-footer"><!-- container-footer -->
@@ -10,22 +13,21 @@
             <div class="six columns">
                 <div class="address-zone"><!-- address-zone -->
                     <div class="box">
-                        <h2>Dirección Chile</h2>
-
-                        <p>Pdte Riesco 5335, Las Condes, Región Metropolitana</p>
-                        <h2>Dirección Perú</h2>
-                        <p>Edificio Business Club, Calle Bolívar 472, Miraflores 15074</p>
-                    </div>
-
-                    <div class="box">
-                        <h2>Email</h2>
-                        <p>información@mho.cl</p>
-                    </div>
-
-                    <div class="box">
-                        <h2>Teléfono</h2>
-                        <p>+(56 2)  265 71625</p>
-                        <p>+(51 1)  396 8053</p>
+                        <?php
+                        foreach ($contactos as $contacto) { ?>
+                            <h2>Dirección <?php echo $contacto['pais']; ?></h2>
+                            <p><?php echo $contacto['direccion']; ?></p>
+                            <?php if ($contacto['email']): ?>
+                                <p class="email">
+                                    <a href="mailto:<?php echo $contacto['email']; ?>" title="Enviar email"><?php echo $contacto['email']; ?></a>
+                                </p>
+                            <?php endif; ?>
+                            <?php if ($contacto['telefono']): ?>
+                                <p class="fono">
+                                    <a href="tel:<?php echo $contacto['telefono']; ?>" title="Llamar al teléfono"><?php echo $contacto['telefono']; ?></a>
+                                </p>
+                            <?php endif; ?>
+                        <?php } ?>
                     </div>
                 </div><!-- fin address-zone -->
             </div>
