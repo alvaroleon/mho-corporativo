@@ -35,7 +35,11 @@ $alianzas = get_alianzas(4);
         </article>
 
         <div class="break">
-            <?php the_content(); ?>
+            <div class="container">
+                <div class="three columns animated">
+                    <?php the_content(); ?>
+                </div>
+            </div>
         </div>
 
     </section>

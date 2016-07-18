@@ -248,7 +248,7 @@ article {
   z-index: 1;
 }
 .principal::after {
-  background: linear-gradient(to left, #006039 0%, #006039 50%, #00568a 50%, #00568a 50%, #00568a 100%);
+  background: linear-gradient(to left, #008a57 0%, #008a57 50%, #006eb6 50%, #006eb6 50%, #006eb6 100%);
   content: "";
   width: 45%;
   height: 10px;
@@ -299,7 +299,7 @@ article {
   z-index: 1;
 }
 .servicios::after {
-  background: linear-gradient(to right, #00568a 0%, #00568a 33.3%, #006039 33.3%, #006039 70%, #ee801c 70%, #ee801c 100%);
+  background: linear-gradient(to right, #006eb6 0%, #006eb6 33.3%, #008a57 33.3%, #008a57 70%, #ee801c 70%, #ee801c 100%);
   content: "";
   width: 100%;
   height: 10px;
@@ -365,7 +365,7 @@ article {
   display: none;
 }
 .equipo #area-ambiental .current .detalle-equipo h2 span {
-  color: #006039;
+  color: #008a57;
 }
 .equipo #area-vial .current .detalle-equipo h2 span {
   color: #ee801c;
@@ -460,7 +460,7 @@ article {
 }
 .banner-clientes::before,
 .banner-clientes::after {
-  background: linear-gradient(to right, #00568a 0%, #00568a 33.3%, #006039 33.3%, #006039 70%, #ee801c 70%, #ee801c 100%);
+  background: linear-gradient(to right, #006eb6 0%, #006eb6 33.3%, #008a57 33.3%, #008a57 70%, #ee801c 70%, #ee801c 100%);
   content: "";
   width: 100%;
   height: 10px;
@@ -541,19 +541,19 @@ article {
   text-decoration: none;
 }
 section.ambiental .banner-principal::after {
-  background-color: rgba(0, 96, 57, 0.8);
+  background-color: rgba(0, 138, 87, 0.8);
 }
 section.ambiental .cover-button {
-  background-color: #006039;
+  background-color: #008a57;
 }
 section.ambiental .cover-button::after {
-  background-color: #006039;
+  background-color: #008a57;
 }
 section.ambiental h1 span {
-  color: #006039;
+  color: #008a57;
 }
 section.ambiental .bloque ul li {
-  color: #006039;
+  color: #008a57;
 }
 section.vial .banner-principal::after {
   background-color: rgba(238, 128, 28, 0.8);
@@ -571,19 +571,19 @@ section.vial .bloque ul li {
   color: #ee801c;
 }
 section.detalle .banner-principal::after {
-  background-color: rgba(0, 86, 138, 0.8);
+  background-color: rgba(0, 110, 182, 0.8);
 }
 section.detalle .cover-button {
-  background-color: #00568a;
+  background-color: #006eb6;
 }
 section.detalle .cover-button::after {
-  background-color: #00568a;
+  background-color: #006eb6;
 }
 section.detalle h1 span {
-  color: #00568a;
+  color: #006eb6;
 }
 section.detalle .bloque ul li {
-  color: #00568a;
+  color: #006eb6;
 }
 .banner-principal {
   background: url("../images/bg-principal.jpg") no-repeat left top;
@@ -683,17 +683,17 @@ ul.list-style li::before {
   font-family: "MyriadPro-Bold";
   font-size: 0.875em;
   text-decoration: none;
-}
-.paginador-text ul li a.prev {
-  background: url("../images/arrow-prev.png") no-repeat left center;
-  padding-left: 30px;
-}
-.paginador-text ul li a.next {
-  background: url("../images/arrow-next.png") no-repeat right center;
-  padding-right: 30px;
-}
-.paginador-text ul li a.next.ambiental {
-  background-image: url("../images/arrow-next-green.png");
+  /*&.prev{
+                    background: url("../images/arrow-prev.png") no-repeat left center;
+                    padding-left: 30px;
+                }
+                &.next{
+                    background: url("../images/arrow-next.png") no-repeat right center;
+                    padding-right: 30px;
+                    &.ambiental{
+                        background-image: url("../images/arrow-next-green.png");
+                    }
+                }*/
 }
 .content-map {
   position: relative;
@@ -720,6 +720,9 @@ ul.list-style li::before {
 .maps-contact .info_content p {
   margin: 0;
 }
+.maps-contact .info_content a {
+  display: block;
+}
 footer {
   background: url("../images/bg-principal.jpg") no-repeat left top;
   background-size: cover;
@@ -727,7 +730,7 @@ footer {
   padding: 50px 0;
 }
 footer::after {
-  background: linear-gradient(to right, #00568a 0%, #00568a 33.3%, #006039 33.3%, #006039 70%, #ee801c 70%, #ee801c 100%);
+  background: linear-gradient(to right, #006eb6 0%, #006eb6 33.3%, #008a57 33.3%, #008a57 70%, #ee801c 70%, #ee801c 100%);
   content: "";
   width: 100%;
   height: 10px;
@@ -807,19 +810,19 @@ span.wpcf7-not-valid-tip {
   color: #ee801c;
 }
 .arrow-btn.ar-detalle {
-  color: #00568a;
+  color: #006eb6;
 }
 .arrow-btn.ar-ambiental {
-  color: #006039;
+  color: #008a57;
 }
 .btn-ar.ar-vial:hover {
   border-color: #ee801c;
 }
 .btn-ar.ar-detalle:hover {
-  border-color: #00568a;
+  border-color: #006eb6;
 }
 .btn-ar.ar-ambiental:hover {
-  border-color: #006039;
+  border-color: #008a57;
 }
 .stylish-img {
   display: inline-block;
