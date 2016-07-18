@@ -6,9 +6,10 @@ if (have_posts()) the_post();
 
 get_header();
 ?>
-    <script type="text/javascript">
-        var map;
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1HhCzSEk-fObvREdU1Cr_SR3I5XOLHPg&callback=initialize"></script>
 
+    <script>
+        var map;
         var markerData= [
             {lat: -33.405106 , lng: -70.576261  , zoom: 15 , name: "Chile"},
             {lat: -12.125999 , lng: -77.024808  , zoom: 15 , name: "Perú"}
@@ -20,12 +21,22 @@ get_header();
                 center: {lat: -33.405106, lng: -70.576261}
             });
 
+
+            var i=0;
             markerData.forEach(function(data) {
+                var infowindow = new google.maps.InfoWindow({
+                    content: '<div class="info_content"><h3>'+window.pais[i]+'</h3><p>'+window.direccion[i]+'</p><a title="'+window.email[i]+'" href="mailto:'+window.email[i]+'">'+window.email[i]+'</a><a title="'+window.fono[i]+'" href="tel:'+window.fono[i]+'">'+window.fono[i]+'</a></div>'
+                });
                 var newmarker= new google.maps.Marker({
                     map:map,
                     position:{lat:data.lat, lng:data.lng},
                     title: data.name
                 });
+                newmarker.addListener('click', function() {
+                    infowindow.open(map, newmarker);
+                });
+                i++;
+
                 jQuery("#selectlocation").append('<option value="'+[data.lat, data.lng,data.zoom].join('|')+'">'+data.name+'</option>');
             });
 
@@ -146,5 +157,12 @@ get_header();
         </div>
 
     </section>
+
+    <script>
+        window.pais = ['Chile', 'Perú'];
+        window.direccion = ['Pdte Riesco 5335, Las Condes, Región Metropolitana', 'Edificio Business Club, Calle Bolívar 472, Miraflores 15074, Perú'];
+        window.email = ['', 'info@prueba.prueba'];
+        window.fono = ['+562 26571625', '+511 3968053 '];
+    </script>
 
 <?php get_footer(); ?>
