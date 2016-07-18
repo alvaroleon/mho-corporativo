@@ -8,14 +8,19 @@ get_header();
  */
 $bienvenida = get_field('bienvenida')[0];
 $is_quienes_somos = get_field('mostrar_quienes_somos');
+$quienes_somos = get_field('quienes_somos')[0];
 $is_servicios = get_field('mostrar_nuestros_servicios');
 $is_equipo = get_field('mostrar_nuestro_equipo');
 $is_alianzas = get_field('mostrar_alianzas');
-
 $paginas = [];
 
 if ($is_quienes_somos) {
-    $paginas[] = 6;
+    $quienes_somos = [
+        'contenido' => $quienes_somos['contenido'][0],
+        'mision_vision' => $quienes_somos['mision_vision'][0]
+    ];
+
+
 }
 
 if ($is_servicios) {
@@ -23,52 +28,11 @@ if ($is_servicios) {
 }
 
 if ($is_equipo) {
-    $paginas[] = 14;
-
     $equipo = get_equipo();
 }
 
 if ($is_alianzas) {
-    $paginas[] = 16;
     $alianzas = get_alianzas();
-}
-
-if (count($paginas)) {
-    $q = new WP_Query([
-        'post_type' => 'page',
-        'post__in' => $paginas,
-        'show_posts' => -1
-    ]);
-
-    while ($q->have_posts()) {
-        $q->the_post();
-
-        switch (get_the_ID()) {
-            case 6: {
-                $quienes_somos = [
-                    'contenido' => get_field('contenido')[0],
-                    'mision_vision' => get_field('mision_vision')[0]
-                ];
-
-                break;
-            }
-
-            case 14: { //Equipo
-
-                break;
-            }
-
-            case 16: { //Alianzas
-                /*$quienes_somos = [
-                    'contenido' => get_field('contenido')[0],
-                    'mision_vision' => get_field('mision_vision')[0]
-                ];*/
-
-                break;
-            }
-        }
-    }
-    wp_reset_query();
 }
 
 //Fin capa lógica
