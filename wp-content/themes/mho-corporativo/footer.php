@@ -14,8 +14,11 @@ $contactos = get_field('datos', 18);
                 <div class="address-zone"><!-- address-zone -->
                     <div class="box">
                         <?php
-                        foreach ($contactos as $contacto) { ?>
-                            <h2>Dirección <?php echo $contacto['pais']; ?></h2>
+                        $pais_aux = '';
+                        foreach ($contactos as $contacto) {
+                            ?>
+                            <h2><?php if ($pais_aux != $contacto['pais']): ?>Dirección <?php echo $contacto['pais']; ?><?php endif; ?></h2>
+
                             <p><?php echo $contacto['direccion']; ?></p>
                             <?php if ($contacto['email']): ?>
                                 <p class="email">
@@ -27,7 +30,9 @@ $contactos = get_field('datos', 18);
                                     <a href="tel:<?php echo $contacto['telefono']; ?>" title="Llamar al teléfono"><?php echo $contacto['telefono']; ?></a>
                                 </p>
                             <?php endif; ?>
-                        <?php } ?>
+                            <?php
+                            $pais_aux = $contacto['pais'];
+                        } ?>
                     </div>
                 </div><!-- fin address-zone -->
             </div>
@@ -35,5 +40,8 @@ $contactos = get_field('datos', 18);
     </div>
 </footer>
 <?php wp_footer(); ?>
+<?php if (is_page('contacto')) :?>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1HhCzSEk-fObvREdU1Cr_SR3I5XOLHPg&callback=initializeMap"></script>
+<?php endif; ?>
 </body>
 </html>

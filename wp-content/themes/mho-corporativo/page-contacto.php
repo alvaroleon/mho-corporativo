@@ -6,8 +6,10 @@ if (have_posts()) the_post();
 
 $contactos = get_field('datos');
 get_header();
+
 ?>
-<?php if ($contactos[0]['mapa']): ?>
+<?php if ($contactos[0]['mapa']):
+    ?>
     <script>
         var map;
         var markerData = [];
@@ -18,13 +20,13 @@ get_header();
             lat: <?php echo $contacto['mapa']['lat']; ?>,
             lng: <?php echo $contacto['mapa']['lng']; ?>,
             zoom: 15,
-            name: '<?php echo $contacto['pais']; ?>'
+            name: '<?php echo explode(',',$contacto['mapa']['address'])[0] . ', ' .$contacto['pais']; ?>'
         });
         <?php
         endif;
         endforeach; ?>
 
-        function initialize() {
+        function initializeMap() {
             map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 15,
                 center: {lat: <?php echo $contactos[0]['mapa']['lat']; ?>, lng: <?php echo $contactos[0]['mapa']['lng']; ?>}

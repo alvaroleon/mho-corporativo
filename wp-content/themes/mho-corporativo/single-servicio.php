@@ -12,6 +12,8 @@ $color_principal_rgb = hex2rgb($color_principal);
 $brochure = get_field('brochure');
 $contenido = get_field('contenido')[0];
 $servicios = get_field('servicios');
+$fondo_bajada = get_field('fondo_bajada');
+$fondo_bajada = $fondo_bajada['url'];
 ?>
     <style>
         section.vial .cover-button::after {
@@ -20,6 +22,10 @@ $servicios = get_field('servicios');
 
         section.vial .banner-principal::after {
             background-color: rgba(<?php echo $color_principal_rgb; ?>, 0.8);
+        }
+
+        .banner-principal {
+            background-image: url("<?php echo $fondo_bajada; ?>") !important;
         }
 
         section.vial .cover-button {
