@@ -304,3 +304,17 @@ function hide_editor()
 }
 
 add_action('admin_init', 'hide_editor');
+
+/**
+ * Agrega los formatos de video y pdf al admin
+ * @param array $existing_mimes
+ * @return array
+ */
+function my_theme_custom_upload_mimes( $existing_mimes ) {
+    $existing_mimes['webm'] = 'video/webm';
+    $existing_mimes['mp4'] = 'video/mp4';
+    $existing_mimes['ogv'] = 'video/ogg';
+
+    return $existing_mimes;
+}
+add_filter( 'mime_types', 'my_theme_custom_upload_mimes' );

@@ -14,6 +14,9 @@ $contenido = get_field('contenido')[0];
 $servicios = get_field('servicios');
 $fondo_bajada = get_field('fondo_bajada');
 $fondo_bajada = $fondo_bajada['url'];
+$video_bajada = get_field('video_bajada');
+$fondo_bajada_principal = get_field('fondo_bajada_principal');
+
 ?>
     <style>
         section.vial .cover-button::after {
@@ -24,10 +27,17 @@ $fondo_bajada = $fondo_bajada['url'];
             background-color: rgba(<?php echo $color_principal_rgb; ?>, 0.8);
         }
 
+        <?php if ($fondo_bajada_principal == 'Imagen') { ?>
         .banner-principal {
             background-image: url("<?php echo $fondo_bajada; ?>") !important;
         }
 
+        <?php } else { ?>
+        .banner-principal {
+            background-image: none !important;
+        }
+
+        <?php } ?>
         section.vial .cover-button {
             background-color: <?php echo $color_principal; ?>
         }
@@ -44,13 +54,17 @@ $fondo_bajada = $fondo_bajada['url'];
         <article>
             <div class="banner-principal"><!-- banner-principal -->
                 <div class="container">
-                    <div class="three columns">
-                        <div class="cover-button">
-                            <?php if ($brochure): ?>
-                                <a class="button button-primary" href="<?php echo $brochure['url']; ?>" target="_blank" title="Descarga nuestro brochure">Descarga nuestro brochure</a>
-                            <?php endif; ?>
+                    <?php if ($fondo_bajada_principal == 'Imagen'): ?>
+                        <div class="three columns">
+                            <div class="cover-button">
+                                <?php if ($brochure): ?>
+                                    <a class="button button-primary" href="<?php echo $brochure['url']; ?>"
+                                       target="_blank"
+                                       title="Descarga nuestro brochure">Descarga nuestro brochure</a>
+                                <?php endif; ?>
+                            </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
                     <div class="seven offset-by-one columns">
                         <div class="">
                             <h1><?php the_title(); ?></h1>
@@ -58,6 +72,13 @@ $fondo_bajada = $fondo_bajada['url'];
                         </div>
                     </div>
                 </div>
+                <?php if ($fondo_bajada_principal == 'Video'): ?>
+                    <video src="<?php echo $video_bajada; ?>"
+                           width="100%" height="100%" autoplay="autoplay" controls="false" loop muted>
+                        <code>Video</code>
+                        Tu navegador no soporta video HTML, por favor actualizar a las últimas versiones.
+                    </video>
+                <?php endif; ?>
             </div><!-- fin banner-principal -->
 
         </article>
@@ -82,7 +103,9 @@ $fondo_bajada = $fondo_bajada['url'];
                 <div class="bloque">
                     <div class="container">
                         <div class="six columns">
-                            <img class="img-responsive" src="<?php echo $servicio['imagen']['sizes']['servicio_img']; ?>" draggable="false" border="0" alt="<?php echo $servicio['titulo']; ?>">
+                            <img class="img-responsive"
+                                 src="<?php echo $servicio['imagen']['sizes']['servicio_img']; ?>" draggable="false"
+                                 border="0" alt="<?php echo $servicio['titulo']; ?>">
                         </div>
                         <div class="six columns">
                             <h2><?php echo $servicio['titulo']; ?></h2>
@@ -112,11 +135,13 @@ $fondo_bajada = $fondo_bajada['url'];
                             $color_area = get_field('color_principal');
                             ?>
                             <li>
-                                <a class="<?php echo $i == 0 ? 'prev' : 'next'; ?>" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                <a class="<?php echo $i == 0 ? 'prev' : 'next'; ?>" href="<?php the_permalink(); ?>"
+                                   title="<?php the_title(); ?>">
                                     <?php if ($i == 0) : ?>
                                         <span>
                                             <svg width="20px" height="8px">
-                                                <polygon fill="<?php echo $color_area; ?>" points="19.531,4.698 5.448,4.719 6.177,7.469 0,3.828 6.177,0 5.448,2.698 19.531,2.698 ">
+                                                <polygon fill="<?php echo $color_area; ?>"
+                                                         points="19.531,4.698 5.448,4.719 6.177,7.469 0,3.828 6.177,0 5.448,2.698 19.531,2.698 ">
                                             </svg>
                                         </span>
                                     <?php endif; ?>
@@ -124,7 +149,8 @@ $fondo_bajada = $fondo_bajada['url'];
                                     <?php if ($i == 1) : ?>
                                         <span>
                                             <svg width="20px" height="8px">
-                                                <polygon fill="<?php echo $color_area; ?>" points="0,2.771 14.083,2.75 13.354,0 19.531,3.641 13.354,7.469 14.083,4.771 0,4.771 ">
+                                                <polygon fill="<?php echo $color_area; ?>"
+                                                         points="0,2.771 14.083,2.75 13.354,0 19.531,3.641 13.354,7.469 14.083,4.771 0,4.771 ">
                                             </svg>
                                         </span>
                                     <?php endif; ?>
