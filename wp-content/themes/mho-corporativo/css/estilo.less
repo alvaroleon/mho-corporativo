@@ -357,7 +357,8 @@ article{
     ul{
         display: table;
         width: 100%;
-        padding-top: 30px;
+        padding-top: 0;
+        margin: 0;
         li{
             list-style: none;
             float: left;
@@ -394,7 +395,7 @@ article{
     .hide-team{
         display: none;
     }
-    #area-ambiental{
+    #chile-area-ambiental{
         .current{
             .detalle-equipo{
                 h2{
@@ -405,12 +406,23 @@ article{
             }
         }
     }
-    #area-vial{
+    #chile-area-vial{
         .current{
             .detalle-equipo{
                 h2{
                     span{
                         color: @color-vial;
+                    }
+                }
+            }
+        }
+    }
+    #chile-area-ingenieria-detalle{
+        .current{
+            .detalle-equipo{
+                h2{
+                    span{
+                        color: @color-detalle;
                     }
                 }
             }
@@ -683,6 +695,7 @@ section.detalle{
     background-size: cover;
     position: relative;
     padding: 30px 0;
+    overflow: hidden;
     &::after{
         background-color: fade(@brand-color, 80%);
         content: "";
@@ -893,6 +906,21 @@ footer{
 }
 
 /* ESPECIALES */
+.single-servicio{
+    video {
+        background-color: rgba(0, 0, 0, 0);
+        height: auto;
+        left: 50%;
+        min-height: 100%;
+        min-width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        width: auto;
+    }
+}
 span.wpcf7-not-valid-tip{
     font-size: 0.8em;
     color: red;
@@ -912,6 +940,11 @@ span.wpcf7-not-valid-tip{
     }
     &.ar-ambiental{
         color: @color-ambiental;
+    }
+    &.open{
+        background-color: #f4f4f4;
+        border-color: @brand-color;
+        color: @brand-color;
     }
 }
 .btn-ar{

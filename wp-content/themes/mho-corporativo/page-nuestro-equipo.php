@@ -65,6 +65,7 @@ $str_gradient = substr($str_gradient, 0, strlen($str_gradient) - 1);
 echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { background: linear-gradient(to right, {$str_gradient}); }";
 ?>
     </style>
+<?php //print_r($equipo); ?>
     <section>
         <article>
             <div class="banner-principal"><!-- banner-principal -->
@@ -111,18 +112,18 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                                                 </div>
                                                 <div class="six columns">
                                                     <div class="detalle-equipo"><!-- detalle-equipo -->
-                                                        <h2>Área <span><?php echo preg_replace([
-                                                                        "/área|Área/",
-                                                                        "/Ingeniería|ingeniería|ingenieria/i"
-                                                                    ], [
-                                                                        '',
-                                                                        'Ing.'
-                                                                    ], $integrante['area']) . ' | ' . $eq['pais']; ?></span>
+                                                        <h2><?php echo $area_slug != 'administracion' ? 'Área':''; ?> <span><?php echo preg_replace([
+                                                                    "/área|Área/",
+                                                                    "/Ingeniería|ingeniería|ingenieria/i"
+                                                                ], [
+                                                                    '',
+                                                                    'Ing.'
+                                                                ], $integrante['area']); echo $area_slug != 'administracion' ? ' | ' . $eq['pais']: ''; ?></span>
                                                         </h2>
                                                         <h3><?php echo $integrante['nombre']; ?></h3>
                                                         <h4><?php echo $integrante['titulo']; ?></h4>
                                                         <p><?php echo $integrante['cargo']; ?></p>
-                                                        <?php if ($integrante['email']) : ?>
+                                                        <?php if (trim($integrante['email'])) : ?>
                                                             <a class="button button-primary" href="mailto:<?php echo $integrante['email']; ?>" title="Enviar correo">Enviar correo</a>
                                                         <?php endif; ?>
                                                     </div><!-- fin detalle-equipo -->
@@ -156,13 +157,20 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                         <div class="double-btn-container">
                             <div class="container">
                                 <?php
-                                //                                    $areas_invert = array_reverse($eq['data']);
+                                // $areas_invert = array_reverse($eq['data']);
+                                $total_sections = count($eq['data']);
 
-                                foreach ($eq['data'] as $area_slug => $area) : ?>
-                                    <div class="six columns">
-                                        <a class="arrow-btn custom-ar-<?php echo $area_slug; ?>" data-slider="<?php echo $pais_slug; ?>-<?php echo $area_slug; ?>" href="#" title="<?php echo $area['area']; ?>"><?php echo $area['area']; ?></a>
-                                    </div>
-                                <?php endforeach; ?>
+                                if ($total_sections > 1) {
+                                    foreach ($eq['data'] as $area_slug => $area) :
+                                        $column_num = 12 / $total_sections;
+                                        $column = columns_number_converter($column_num);
+                                        ?>
+                                        <div class="<?php echo $column; ?> columns">
+                                            <a class="arrow-btn custom-ar-<?php echo $area_slug; ?>" data-slider="<?php echo $pais_slug; ?>-<?php echo $area_slug; ?>" href="#" title="<?php echo $area['area']; ?>"><?php echo $area['area']; ?></a>
+                                        </div>
+                                    <?php endforeach;
+                                }
+                                ?>
                             </div>
                         </div>
                     </article>

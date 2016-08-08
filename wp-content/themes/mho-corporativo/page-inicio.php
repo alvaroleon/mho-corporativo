@@ -97,7 +97,8 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                         <?php echo $bienvenida['bajada']; ?>
 
                         <?php if ($bienvenida['entrada_asociada']): ?>
-                            <a class="button button-primary" href="<?php echo $bienvenida['entrada_asociada']; ?>" title="Leer más">Leer más</a>
+                            <a class="button button-primary" href="<?php echo $bienvenida['entrada_asociada']; ?>"
+                               title="Leer más">Leer más</a>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -123,7 +124,9 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
 
                         <div class="six columns animated">
                             <div class="stylish-img">
-                                <img class="img-responsive" draggable="false" src="<?php echo $quienes_somos['contenido']['imagen']['sizes']['quienes_somos_big']; ?>" alt="Ingenieros y Consultores"/>
+                                <img class="img-responsive" draggable="false"
+                                     src="<?php echo $quienes_somos['contenido']['imagen']['sizes']['quienes_somos_big']; ?>"
+                                     alt="Ingenieros y Consultores"/>
                             </div>
                         </div>
 
@@ -134,7 +137,9 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                     <div class="container">
                         <div class="six columns animated">
                             <div class="stylish-img">
-                                <img class="img-responsive" draggable="false" src="<?php echo $quienes_somos['mision_vision']['imagen']['sizes']['quienes_somos_big']; ?>" alt="Ingenieros y Consultores"/>
+                                <img class="img-responsive" draggable="false"
+                                     src="<?php echo $quienes_somos['mision_vision']['imagen']['sizes']['quienes_somos_big']; ?>"
+                                     alt="Ingenieros y Consultores"/>
                             </div>
                         </div>
 
@@ -160,7 +165,9 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                                 <h1>Nuestros Servicios</h1>
                                 <?php /** @var array $nuestros_servicios */
                                 if ($nuestros_servicios['brochure']) : ?>
-                                    <a class="button button-primary" href="<?php echo $nuestros_servicios['brochure']['url']; ?>" target="_blank" title="Descarga nuestro brochure">Descarga nuestro brochure</a>
+                                    <a class="button button-primary"
+                                       href="<?php echo $nuestros_servicios['brochure']['url']; ?>" target="_blank"
+                                       title="Descarga nuestro brochure">Descarga nuestro brochure</a>
                                 <?php endif; ?>
                             </div>
 
@@ -172,7 +179,9 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                                          */
                                         ?>
                                         <li class="animated">
-                                            <a class="btn-ar custom-btn-<?php echo $area->post_name; ?>" href="<?php the_permalink($area); ?>" title="<?php echo $area->post_title; ?>"><?php echo $area->post_title; ?></a>
+                                            <a class="btn-ar custom-btn-<?php echo $area->post_name; ?>"
+                                               href="<?php the_permalink($area); ?>"
+                                               title="<?php echo $area->post_title; ?>"><?php echo $area->post_title; ?></a>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>
@@ -202,35 +211,42 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                             <?php
                             $k = 0;
                             foreach ($eq['data'] as $area_slug => $area) : ?>
-                                <div id="<?php echo $pais_slug; ?>-<?php echo $area_slug; ?>" class="team-area<?php echo $k > 0 ? ' hide-team' : ''; ?>">
+                                <div id="<?php echo $pais_slug; ?>-<?php echo $area_slug; ?>"
+                                     class="team-area<?php echo $k > 0 ? ' hide-team' : ''; ?>">
                                     <div class="current animated">
                                         <?php
                                         foreach ($area['data'] as $j => $integrante) :
                                             ?>
-                                            <div id="<?php echo $pais_slug . '-' . $area_slug . '-tab-' . $j ?>" class="team<?php echo $j == 0 ? ' current' : ''; ?>"><!-- tab-1 -->
+                                            <div id="<?php echo $pais_slug . '-' . $area_slug . '-tab-' . $j ?>"
+                                                 class="team<?php echo $j == 0 ? ' current' : ''; ?>"><!-- tab-1 -->
                                                 <div class="container">
                                                     <div class="six columns">
                                                         <div class="main-equipo"><!-- main-equipo -->
                                                             <div class="stylish-img">
-                                                                <img class="img-responsive" src="<?php echo $integrante['imagen']['sizes']['equipo_big']; ?>" draggable="false" border="0" alt="<?php echo $integrante['nombre'] . ' - ' . $integrante['cargo']; ?>">
+                                                                <img class="img-responsive"
+                                                                     src="<?php echo $integrante['imagen']['sizes']['equipo_big']; ?>"
+                                                                     draggable="false" border="0"
+                                                                     alt="<?php echo $integrante['nombre'] . ' - ' . $integrante['cargo']; ?>">
                                                             </div>
                                                         </div><!-- fin main-equipo -->
                                                     </div>
                                                     <div class="six columns">
                                                         <div class="detalle-equipo"><!-- detalle-equipo -->
-                                                            <h2>Área <span><?php echo preg_replace([
+                                                            <h2><?php echo $area_slug != 'administracion' ? 'Área':''; ?> <span><?php echo preg_replace([
                                                                             "/área|Área/",
                                                                             "/Ingeniería|ingeniería|ingenieria/i"
                                                                         ], [
                                                                             '',
                                                                             'Ing.'
-                                                                        ], $integrante['area']) . ' | ' . $eq['pais']; ?></span>
+                                                                        ], $integrante['area']); echo $area_slug != 'administracion' ? ' | ' . $eq['pais']: ''; ?></span>
                                                             </h2>
                                                             <h3><?php echo $integrante['nombre']; ?></h3>
                                                             <h4><?php echo $integrante['titulo']; ?></h4>
                                                             <p><?php echo $integrante['cargo']; ?></p>
-                                                            <?php if ($integrante['email']) : ?>
-                                                                <a class="button button-primary" href="mailto:<?php echo $integrante['email']; ?>" title="Enviar correo">Enviar correo</a>
+                                                            <?php if (trim($integrante['email'])) : ?>
+                                                                <a class="button button-primary"
+                                                                   href="mailto:<?php echo $integrante['email']; ?>"
+                                                                   title="Enviar correo">Enviar correo</a>
                                                             <?php endif; ?>
                                                         </div><!-- fin detalle-equipo -->
                                                     </div>
@@ -242,11 +258,17 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                                     <div class="full-equipo"><!-- full-equipo -->
                                         <div class="container">
                                             <div class="twelve columns">
-                                                <div id="equipo-<?php echo $pais_slug; ?>" class="owl-carousel owl-theme">
+                                                <div id="equipo-<?php echo $pais_slug; ?>"
+                                                     class="owl-carousel owl-theme">
                                                     <?php foreach ($area['data'] as $j => $integrante): ?>
                                                         <div class="item">
-                                                            <a href="#" <?php echo $j == 0 ? 'class="current"' : ''; ?> data-tab="<?php echo $pais_slug . '-' . $area_slug . '-tab-' . $j ?>" title="<?php echo $integrante['nombre']; ?>">
-                                                                <img src="<?php echo $integrante['imagen_miniatura']['sizes']['equipo_small']; ?>" border="0" draggable="false" alt="<?php echo $integrante['nombre']; ?>"/>
+                                                            <a href="#" <?php echo $j == 0 ? 'class="current"' : ''; ?>
+                                                               data-tab="<?php echo $pais_slug . '-' . $area_slug . '-tab-' . $j ?>"
+                                                               title="<?php echo $integrante['nombre']; ?>">
+                                                                <img
+                                                                    src="<?php echo $integrante['imagen_miniatura']['sizes']['equipo_small']; ?>"
+                                                                    border="0" draggable="false"
+                                                                    alt="<?php echo $integrante['nombre']; ?>"/>
                                                             </a>
                                                         </div>
                                                     <?php endforeach; ?>
@@ -264,12 +286,22 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                                 <div class="container">
                                     <?php
                                     //                                    $areas_invert = array_reverse($eq['data']);
+                                    $total_sections = count($eq['data']);
 
-                                    foreach ($eq['data'] as $area_slug => $area) : ?>
-                                        <div class="six columns">
-                                            <a class="arrow-btn custom-ar-<?php echo $area_slug; ?>" data-slider="<?php echo $pais_slug; ?>-<?php echo $area_slug; ?>" href="#" title="<?php echo $area['area']; ?>"><?php echo $area['area']; ?></a>
-                                        </div>
-                                    <?php endforeach; ?>
+                                    if ($total_sections > 1) {
+                                        foreach ($eq['data'] as $area_slug => $area) :
+                                            $column_num = 12 / $total_sections;
+                                            $column = columns_number_converter($column_num);
+                                            ?>
+                                            <div class="<?php echo $column; ?> columns">
+                                                <a class="arrow-btn custom-ar-<?php echo $area_slug; ?>"
+                                                   data-slider="<?php echo $pais_slug; ?>-<?php echo $area_slug; ?>"
+                                                   href="#"
+                                                   title="<?php echo $area['area']; ?>"><?php echo $area['area']; ?></a>
+                                            </div>
+                                        <?php endforeach;
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </article>
@@ -309,10 +341,12 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                             ?>
                             <div class="three columns animated">
                                 <div class="box-partner"><!-- box-partner -->
-                                    <img class="img-responsive" src="<?php echo $alianza['imagen']; ?>" draggable="false" border="0" alt="<?php echo $alianza['title']; ?>"/>
+                                    <img class="img-responsive" src="<?php echo $alianza['imagen']; ?>"
+                                         draggable="false" border="0" alt="<?php echo $alianza['title']; ?>"/>
                                     <h2><?php echo $alianza['title']; ?></h2>
                                     <p>
-                                        <a href="<?php echo $alianza['sitio_web']; ?>" target="_blank" title="<?php echo $url_component['host']; ?>"><?php echo $url_component['host']; ?></a>
+                                        <a href="<?php echo $alianza['sitio_web']; ?>" target="_blank"
+                                           title="<?php echo $url_component['host']; ?>"><?php echo $url_component['host']; ?></a>
                                     </p>
                                 </div><!-- fin box-partner -->
                             </div>
@@ -325,12 +359,14 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                             <?php foreach ($alianza_list as $j => $alianza) {
                                 $url_component = parse_url($alianza['sitio_web']);
                                 ?>
-                                <div class="three <?php echo $j == 0 ? 'offset-by-three':''; ?> columns animated">
+                                <div class="three <?php echo $j == 0 ? 'offset-by-three' : ''; ?> columns animated">
                                     <div class="box-partner"><!-- box-partner -->
-                                        <img class="img-responsive" src="<?php echo $alianza['imagen']; ?>" draggable="false" border="0" alt="<?php echo $alianza['title']; ?>"/>
+                                        <img class="img-responsive" src="<?php echo $alianza['imagen']; ?>"
+                                             draggable="false" border="0" alt="<?php echo $alianza['title']; ?>"/>
                                         <h2><?php echo $alianza['title']; ?></h2>
                                         <p>
-                                            <a href="<?php echo $alianza['sitio_web']; ?>" target="_blank" title="<?php echo $url_component['host']; ?>"><?php echo $url_component['host']; ?></a>
+                                            <a href="<?php echo $alianza['sitio_web']; ?>" target="_blank"
+                                               title="<?php echo $url_component['host']; ?>"><?php echo $url_component['host']; ?></a>
                                         </p>
                                     </div><!-- fin box-partner -->
                                 </div>

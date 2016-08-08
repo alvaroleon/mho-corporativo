@@ -114,13 +114,18 @@ function get_equipo()
          */
         $pais = get_the_terms($q->post, 'pais')[0];
         $area = get_field('area');
+        $array_index = $pais->slug;
 
-        $equipo_aux[$pais->slug]['pais'] = $pais->name;
-        $equipo_aux[$pais->slug]['data'][$area->post_name]['area'] = $area->post_title;
-        $equipo_aux[$pais->slug]['data'][$area->post_name]['area_url'] = get_permalink($area);
-        $equipo_aux[$pais->slug]['data'][$area->post_name]['area_color'] = get_field('color_principal', $area->ID);
+        if (!$pais->slug) {
+            $array_index = 'none';
+        }
 
-        $equipo_aux[$pais->slug]['data'][$area->post_name]['data'][] = [
+        $equipo_aux[$array_index]['pais'] = $pais->name;
+        $equipo_aux[$array_index]['data'][$area->post_name]['area'] = $area->post_title;
+        $equipo_aux[$array_index]['data'][$area->post_name]['area_url'] = get_permalink($area);
+        $equipo_aux[$array_index]['data'][$area->post_name]['area_color'] = get_field('color_principal', $area->ID);
+
+        $equipo_aux[$array_index]['data'][$area->post_name]['data'][] = [
             'nombre' => $q->post->post_title,
             'cargo' => get_field('cargo'),
             'area' => $area->post_title,
@@ -151,7 +156,50 @@ function get_equipo()
         $equipo[$pais->slug] = $equipo_aux[$pais->slug];
     }
 
+    if (count($equipo_aux['none'])) {
+        $equipo['none'] = $equipo_aux['none'];
+    }
+
     return $equipo;
+}
+
+/**
+ * Convierte un número en palabra para columnas del HTML
+ * @param int $num
+ * @return null|string
+ */
+function columns_number_converter($num)
+{
+    switch ($num) {
+        case 0:
+            return null;
+        case 1:
+            return 'one';
+        case 2:
+            return 'two';
+        case 3:
+            return 'three';
+        case 4:
+            return 'four';
+        case 5:
+            return 'five';
+        case 6:
+            return 'six';
+        case 7:
+            return 'seven';
+        case 8:
+            return 'eight';
+        case 9:
+            return 'nine';
+        case 10:
+            return 'ten';
+        case 11:
+            return 'eleven';
+        case 12:
+            return 'twelve';
+        default:
+            return null;
+    }
 }
 
 /**
@@ -195,7 +243,8 @@ function get_alianzas($columns = 3)
  * Obtiene las áreas
  * @return array
  */
-function get_areas() {
+function get_areas()
+{
     $q = new WP_Query([
         'post_type' => 'servicio',
         'showposts' => -1,
@@ -222,7 +271,8 @@ function get_areas() {
  * @param string $seperator
  * @return array|bool|string
  */
-function hex2rgb($hex_str, $return_as_string = true, $seperator = ',') {
+function hex2rgb($hex_str, $return_as_string = true, $seperator = ',')
+{
     $hex_str = preg_replace("/[^0-9A-Fa-f]/", '', $hex_str); // Gets a proper hex string
     $rgbArray = array();
     if (strlen($hex_str) == 6) { //If a proper hex code, convert using bitwise operation. No overhead... faster
@@ -243,13 +293,14 @@ function hex2rgb($hex_str, $return_as_string = true, $seperator = ',') {
 /**
  * Para ocultar editor en Quienes somos
  */
-function hide_editor() {
-    $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
-    if( !isset( $post_id ) ) return;
+function hide_editor()
+{
+    $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'];
+    if (!isset($post_id)) return;
 
-    if($post_id == 6){
+    if ($post_id == 6) {
         remove_post_type_support('page', 'editor');
     }
 }
 
-add_action( 'admin_init', 'hide_editor' );
+add_action('admin_init', 'hide_editor');
