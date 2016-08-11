@@ -195,7 +195,9 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                                         <li class="animated">
                                             <a class="btn-ar custom-btn-<?php echo $area->post_name; ?>"
                                                href="<?php the_permalink($area); ?>"
-                                               title="<?php echo $area->post_title; ?>"><?php echo $area->post_title; ?></a>
+                                               title="<?php echo $area->post_title; ?>">
+                                                <?php echo preg_replace("/Ingeniería|ingeniería|ingenieria/i", '', $area->post_title); ?>
+                                            </a>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>
