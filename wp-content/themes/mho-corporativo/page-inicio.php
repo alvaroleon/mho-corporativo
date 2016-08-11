@@ -12,6 +12,9 @@ $quienes_somos = get_field('quienes_somos')[0];
 $is_servicios = get_field('mostrar_nuestros_servicios');
 $is_equipo = get_field('mostrar_nuestro_equipo');
 $is_alianzas = get_field('mostrar_alianzas');
+$video_bajada = $bienvenida['video'];
+$fondo_bajada_principal = $bienvenida['fondo_principal'];
+
 $paginas = [];
 
 if ($is_quienes_somos) {
@@ -19,8 +22,6 @@ if ($is_quienes_somos) {
         'contenido' => $quienes_somos['contenido'][0],
         'mision_vision' => $quienes_somos['mision_vision'][0]
     ];
-
-
 }
 
 if ($is_servicios) {
@@ -38,10 +39,16 @@ if ($is_alianzas) {
 //Fin capa lógica
 ?>
     <style>
+        <?php if ($fondo_bajada_principal == 'Imagen') { ?>
         .principal {
             background-image: url('<?php echo $bienvenida['imagen']['url']; ?>');
         }
 
+        <?php } else { ?>
+        .principal {
+            background-image: none !important;
+        }
+        <?php } ?>
         <?php
 /**
 * Creación de CSS
@@ -102,6 +109,13 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                         <?php endif; ?>
                     </div>
                 </div>
+                <?php if ($fondo_bajada_principal == 'Video' && !is_mobile()): ?>
+                    <video src="<?php echo $video_bajada; ?>"
+                           width="100%" height="100%" autoplay="autoplay" controls loop muted>
+                        <code>Video</code>
+                        Tu navegador no soporta video HTML, por favor actualizar a las últimas versiones.
+                    </video>
+                <?php endif; ?>
             </div>
         </article>
 
@@ -232,13 +246,15 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                                                     </div>
                                                     <div class="six columns">
                                                         <div class="detalle-equipo"><!-- detalle-equipo -->
-                                                            <h2><?php echo $area_slug != 'administracion' ? 'Área':''; ?> <span><?php echo preg_replace([
-                                                                            "/área|Área/",
-                                                                            "/Ingeniería|ingeniería|ingenieria/i"
-                                                                        ], [
-                                                                            '',
-                                                                            'Ing.'
-                                                                        ], $integrante['area']); echo $area_slug != 'administracion' ? ' | ' . $eq['pais']: ''; ?></span>
+                                                            <h2><?php echo $area_slug != 'administracion' ? 'Área' : ''; ?>
+                                                                <span><?php echo preg_replace([
+                                                                        "/área|Área/",
+                                                                        "/Ingeniería|ingeniería|ingenieria/i"
+                                                                    ], [
+                                                                        '',
+                                                                        'Ing.'
+                                                                    ], $integrante['area']);
+                                                                    echo $area_slug != 'administracion' ? ' | ' . $eq['pais'] : ''; ?></span>
                                                             </h2>
                                                             <h3><?php echo $integrante['nombre']; ?></h3>
                                                             <h4><?php echo $integrante['titulo']; ?></h4>

@@ -259,17 +259,18 @@ article{
 }
 
 .principal{
-    background: url("../images/bg-principal.jpg") no-repeat left top fixed;
+    /*background: url("../images/bg-principal.jpg") no-repeat left top fixed;*/
     background-size: cover;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     padding-top: 40px;
     position: relative;
     margin-bottom: 115px;
+    overflow: hidden;
     &::before{
         background-color: fade(@brand-color,90%);
         background-image: url("../images/icon-mouse.png");
         background-repeat: no-repeat;
-        background-position: 95% 88%;
+        background-position: 95% 79%;
         content: "";
         width: 55%;
         height: 110%;
@@ -284,12 +285,28 @@ article{
         width: 45%;
         height: 10px;
         position: absolute;
-        bottom: -10px;
+        bottom: 46px;
         right: 0;
         z-index: 1;
     }
     &.paddingTop{
         padding-top: 100px;
+    }
+    video{
+        background-color: rgba(0, 0, 0, 0);
+        height: auto;
+        left: 50%;
+        min-height: 100%;
+        min-width: 100%;
+        position: absolute;
+        bottom: 56px;
+        transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        width: auto;
+    }
+    video::-webkit-media-controls {
+        display:none !important;
     }
     h1, p, span, .button{
         color: #fff;
@@ -481,6 +498,7 @@ article{
         }
     }
     .full-equipo{
+        display: none;
         .owl-carousel{
             .item{
                 &:hover{
@@ -618,7 +636,7 @@ article{
 section.ambiental{
     .banner-principal{
         &::after{
-            background-color: fade(@color-ambiental, 80%);
+            background-color: fade(@color-ambiental, 40%);
         }
     }
     .cover-button{
@@ -643,7 +661,7 @@ section.ambiental{
 section.vial{
     .banner-principal{
         &::after{
-            background-color: fade(@color-vial, 80%);
+            background-color: fade(@color-vial, 40%);
         }
     }
     .cover-button{
@@ -668,7 +686,7 @@ section.vial{
 section.detalle{
     .banner-principal{
         &::after{
-            background-color: fade(@color-detalle, 80%);
+            background-color: fade(@color-detalle, 40%);
         }
     }
     .cover-button{
@@ -862,7 +880,7 @@ footer{
     .container{
         position: static;
     }
-    h1, h2, p{
+    h1, h2, p, a, a:hover{
         color: #fff;
     }
     .contact-form{
@@ -923,7 +941,23 @@ footer{
 }
 span.wpcf7-not-valid-tip{
     font-size: 0.8em;
-    color: red;
+    color: #a94442;
+}
+div.wpcf7-validation-errors{
+    font-size: 0.8em;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+    padding: 10px;
+    margin: 0;
+}
+div.wpcf7-validation-success{
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+    padding: 10px;
+    margin: 0;
+    font-size: 0.8em;
 }
 .arrow-btn{
     border: 1px #ccc solid;
@@ -995,6 +1029,9 @@ span.wpcf7-not-valid-tip{
     /*.button{
         display: table-cell;
     }*/
+}
+.double-btn-container{
+    margin: 30px 0;
 }
 .button{
     position: relative;
