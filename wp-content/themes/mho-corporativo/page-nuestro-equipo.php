@@ -10,16 +10,24 @@ $color_principal = get_field('color_principal');
 $color_principal_rgb = hex2rgb($color_principal);
 $fondo_bajada = get_field('fondo_bajada');
 $fondo_bajada = $fondo_bajada['url'];
+$video_bajada = get_field('video_bajada');
+$fondo_bajada_principal = get_field('fondo_bajada_principal');
 $equipo = get_equipo();
 $areas = get_areas();
 ?>
     <style>
+        <?php if ($fondo_bajada_principal == 'Imagen') { ?>
         .banner-principal {
             background-image: url("<?php echo $fondo_bajada; ?>");
         }
+        <?php } else { ?>
+        .banner-principal {
+            background-image: none !important;
+        }
+        <?php } ?>
 
         .banner-principal::after {
-            background-color: rgba(<?php echo $color_principal_rgb; ?>, 0.8);
+            background-color: <?php echo is_mobile() ? $color_principal : "rgba({$color_principal_rgb}, 0.4);"; ?>
         }
 
         <?php
@@ -75,6 +83,13 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                         <?php the_field('bajada'); ?>
                     </div>
                 </div>
+                <?php if ($fondo_bajada_principal == 'Video' && !is_mobile()): ?>
+                    <video src="<?php echo $video_bajada; ?>"
+                           width="100%" height="100%" autoplay="autoplay" controls="false" loop muted>
+                        <code>Video</code>
+                        Tu navegador no soporta video HTML, por favor actualizar a las últimas versiones.
+                    </video>
+                <?php endif; ?>
             </div><!-- fin banner-principal -->
         </article>
 

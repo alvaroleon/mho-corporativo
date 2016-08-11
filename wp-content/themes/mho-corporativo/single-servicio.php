@@ -24,7 +24,7 @@ $fondo_bajada_principal = get_field('fondo_bajada_principal');
         }
 
         section.vial .banner-principal::after {
-            background-color: rgba(<?php echo $color_principal_rgb; ?>, 0.8);
+            background-color: <?php echo is_mobile() ? $color_principal : "rgba({$color_principal_rgb}, 0.4);"; ?>
         }
 
         <?php if ($fondo_bajada_principal == 'Imagen') { ?>
@@ -72,7 +72,7 @@ $fondo_bajada_principal = get_field('fondo_bajada_principal');
                         </div>
                     </div>
                 </div>
-                <?php if ($fondo_bajada_principal == 'Video'): ?>
+                <?php if ($fondo_bajada_principal == 'Video' && !is_mobile()): ?>
                     <video src="<?php echo $video_bajada; ?>"
                            width="100%" height="100%" autoplay="autoplay" controls="false" loop muted>
                         <code>Video</code>
@@ -103,9 +103,11 @@ $fondo_bajada_principal = get_field('fondo_bajada_principal');
                 <div class="bloque">
                     <div class="container">
                         <div class="six columns">
-                            <img class="img-responsive"
-                                 src="<?php echo $servicio['imagen']['sizes']['servicio_img']; ?>" draggable="false"
-                                 border="0" alt="<?php echo $servicio['titulo']; ?>">
+                            <?php if ($servicio['imagen']['sizes']['servicio_img']): ?>
+                                <img class="img-responsive"
+                                     src="<?php echo $servicio['imagen']['sizes']['servicio_img']; ?>" draggable="false"
+                                     border="0" alt="<?php echo $servicio['titulo']; ?>">
+                            <?php endif; ?>
                         </div>
                         <div class="six columns">
                             <h2><?php echo $servicio['titulo']; ?></h2>
@@ -119,10 +121,11 @@ $fondo_bajada_principal = get_field('fondo_bajada_principal');
         <?php
         $q = new WP_Query([
             'post_type' => 'servicio',
-            'post__not_in' => array(get_the_ID()),
-            'showposts' => 2,
+            'post__not_in' => array(346),
+            'showposts' => 3,
             'orderby' => 'menu_order'
         ]);
+        $current_id = get_the_ID();
         ?>
         <div class="container">
             <div class="twelve columns">
@@ -132,6 +135,8 @@ $fondo_bajada_principal = get_field('fondo_bajada_principal');
                         $i = 0;
                         while ($q->have_posts()) :
                             $q->the_post();
+                            if (get_the_ID() == $current_id) continue;
+
                             $color_area = get_field('color_principal');
                             ?>
                             <li>

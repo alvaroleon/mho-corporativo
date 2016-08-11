@@ -318,3 +318,8 @@ function my_theme_custom_upload_mimes( $existing_mimes ) {
     return $existing_mimes;
 }
 add_filter( 'mime_types', 'my_theme_custom_upload_mimes' );
+
+function is_mobile()
+{
+    return preg_match("/(android|webos|avantgo|iphone|ipad|ipod|blackberry|iemobile|bolt|bo‌​ost|cricket|docomo|fone|hiptop|mini|opera mini|kitkat|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+}
