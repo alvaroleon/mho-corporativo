@@ -18,9 +18,11 @@
     }
     nav{
       background-color: #fff;
-      left: -100%;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
       position: fixed;
-      top: 30px;
+      top: 60px;
       z-index: 9999;
       width: 100%;
       height: 100vh;
@@ -29,7 +31,9 @@
       -moz-transition: all 0.5s;
       -webkit-transition: all 0.5s;
       &.open-menu{
-        left: 0;
+        top: 40px;
+        opacity: 1;
+        visibility: visible;
       }
       ul{
         li{
@@ -70,6 +74,9 @@
     }
     h1, .main-menu{
       width: 50px;
+      position: relative;
+      z-index: 99999;
+      background-color: #fff;
     }
     a.main {
       display: block;
@@ -126,6 +133,7 @@
       height: 100%;
     }
     &::after{
+      bottom: 0;
       width: 100%;
     }
   }
