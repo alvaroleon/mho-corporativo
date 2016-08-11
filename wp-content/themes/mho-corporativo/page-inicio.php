@@ -103,7 +103,7 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                     </div>
                 </div>
                 <video src="http://mho.estudiomoca.com/wp-content/uploads/2016/07/detalle.mp4"
-                       width="100%" height="100%" autoplay="autoplay" controls loop muted>
+                       width="100%" height="100%" autoplay="autoplay" loop muted>
                     <code>Video</code>
                     Tu navegador no soporta video HTML, por favor actualizar a las últimas versiones.
                 </video>

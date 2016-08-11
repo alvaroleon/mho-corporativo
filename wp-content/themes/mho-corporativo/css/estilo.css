@@ -197,7 +197,7 @@ header nav ul li:hover .sub-menu {
 }
 header nav ul.sub-menu {
   background-color: #fff;
-  bottom: -91%;
+  bottom: -89%;
   display: none;
   position: absolute;
 }
@@ -254,7 +254,7 @@ article {
   width: 45%;
   height: 10px;
   position: absolute;
-  bottom: 46px;
+  bottom: 47px;
   right: 0;
   z-index: 1;
 }
@@ -276,6 +276,9 @@ article {
 }
 .principal video::-webkit-media-controls {
   display: none !important;
+}
+.principal video {
+  pointer-events: none;
 }
 .principal h1,
 .principal p,
@@ -783,6 +786,13 @@ footer p,
 footer a,
 footer a:hover {
   color: #fff;
+  text-decoration: none;
+}
+footer a {
+  font-family: "MyriadPro-Bold";
+}
+footer a:hover {
+  text-decoration: underline;
 }
 footer .contact-form {
   border: 1px solid #ddd;
@@ -821,7 +831,8 @@ footer .address-zone p {
   margin: 0;
 }
 /* ESPECIALES */
-.single-servicio video {
+.single-servicio video,
+.banner-principal video {
   background-color: rgba(0, 0, 0, 0);
   height: auto;
   left: 50%;
