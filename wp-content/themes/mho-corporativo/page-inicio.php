@@ -111,7 +111,7 @@ echo ".servicios::after,.banner-clientes::before, .banner-clientes::after { back
                 </div>
                 <?php if ($fondo_bajada_principal == 'Video' && !is_mobile()): ?>
                     <video src="<?php echo $video_bajada; ?>"
-                           width="100%" height="100%" autoplay="autoplay" controls loop muted>
+                           width="100%" height="100%" autoplay="autoplay" loop muted>
                         <code>Video</code>
                         Tu navegador no soporta video HTML, por favor actualizar a las últimas versiones.
                     </video>
