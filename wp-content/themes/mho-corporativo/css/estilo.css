@@ -972,6 +972,9 @@ div.wpcf7-validation-success {
 .form-control input {
   margin-bottom: 0;
 }
+.form-control select option {
+  color: #666;
+}
 .form-control textarea {
   resize: none;
   min-height: 100px;
