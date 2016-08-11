@@ -226,7 +226,7 @@ header{
             }
             &.sub-menu{
                 background-color: #fff;
-                bottom: -91%;
+                bottom: -89%;
                 display: none;
                 position: absolute;
                 li{
@@ -285,7 +285,7 @@ article{
         width: 45%;
         height: 10px;
         position: absolute;
-        bottom: 46px;
+        bottom: 47px;
         right: 0;
         z-index: 1;
     }
@@ -308,6 +308,7 @@ article{
     video::-webkit-media-controls {
         display:none !important;
     }
+    video {pointer-events: none}
     h1, p, span, .button{
         color: #fff;
         z-index: 2;
@@ -882,6 +883,13 @@ footer{
     }
     h1, h2, p, a, a:hover{
         color: #fff;
+        text-decoration: none;
+    }
+    a{
+        font-family: "MyriadPro-Bold";
+        &:hover{
+            text-decoration: underline;
+        }
     }
     .contact-form{
         border: 1px solid #ddd;
@@ -924,7 +932,7 @@ footer{
 }
 
 /* ESPECIALES */
-.single-servicio{
+.single-servicio, .banner-principal{
     video {
         background-color: rgba(0, 0, 0, 0);
         height: auto;
@@ -951,7 +959,7 @@ div.wpcf7-validation-errors{
     padding: 10px;
     margin: 0;
 }
-div.wpcf7-validation-success{
+div.wpcf7-mail-sent-ok{
     background-color: #dff0d8;
     border-color: #d6e9c6;
     color: #3c763d;
@@ -1065,6 +1073,11 @@ div.wpcf7-validation-success{
     }
     input{
         margin-bottom: 0;
+    }
+    select{
+        option{
+            color: #666;
+        }
     }
     textarea{
         resize: none;
