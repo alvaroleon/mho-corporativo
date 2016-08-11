@@ -197,7 +197,7 @@ header nav ul li:hover .sub-menu {
 }
 header nav ul.sub-menu {
   background-color: #fff;
-  bottom: -89%;
+  bottom: -87%;
   display: none;
   position: absolute;
 }
