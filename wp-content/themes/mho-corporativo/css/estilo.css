@@ -227,18 +227,19 @@ article {
   opacity: 1;
 }
 .principal {
-  background: url("../images/bg-principal.jpg") no-repeat left top fixed;
+  /*background: url("../images/bg-principal.jpg") no-repeat left top fixed;*/
   background-size: cover;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   padding-top: 40px;
   position: relative;
   margin-bottom: 115px;
+  overflow: hidden;
 }
 .principal::before {
   background-color: rgba(238, 128, 28, 0.9);
   background-image: url("../images/icon-mouse.png");
   background-repeat: no-repeat;
-  background-position: 95% 88%;
+  background-position: 95% 79%;
   content: "";
   width: 55%;
   height: 110%;
@@ -253,12 +254,28 @@ article {
   width: 45%;
   height: 10px;
   position: absolute;
-  bottom: -10px;
+  bottom: 46px;
   right: 0;
   z-index: 1;
 }
 .principal.paddingTop {
   padding-top: 100px;
+}
+.principal video {
+  background-color: rgba(0, 0, 0, 0);
+  height: auto;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  bottom: 56px;
+  transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  width: auto;
+}
+.principal video::-webkit-media-controls {
+  display: none !important;
 }
 .principal h1,
 .principal p,
@@ -422,6 +439,9 @@ article {
   background-color: #ee801c;
   color: #fff;
 }
+.equipo .full-equipo {
+  display: none;
+}
 .equipo .full-equipo .owl-carousel .item:hover a img {
   transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -545,7 +565,7 @@ article {
   text-decoration: none;
 }
 section.ambiental .banner-principal::after {
-  background-color: rgba(0, 138, 87, 0.8);
+  background-color: rgba(0, 138, 87, 0.4);
 }
 section.ambiental .cover-button {
   background-color: #008a57;
@@ -560,7 +580,7 @@ section.ambiental .bloque ul li {
   color: #008a57;
 }
 section.vial .banner-principal::after {
-  background-color: rgba(238, 128, 28, 0.8);
+  background-color: rgba(238, 128, 28, 0.4);
 }
 section.vial .cover-button {
   background-color: #ee801c;
@@ -575,7 +595,7 @@ section.vial .bloque ul li {
   color: #ee801c;
 }
 section.detalle .banner-principal::after {
-  background-color: rgba(0, 110, 182, 0.8);
+  background-color: rgba(0, 110, 182, 0.4);
 }
 section.detalle .cover-button {
   background-color: #006eb6;
@@ -759,7 +779,9 @@ footer .container {
 }
 footer h1,
 footer h2,
-footer p {
+footer p,
+footer a,
+footer a:hover {
   color: #fff;
 }
 footer .contact-form {
@@ -814,7 +836,23 @@ footer .address-zone p {
 }
 span.wpcf7-not-valid-tip {
   font-size: 0.8em;
-  color: red;
+  color: #a94442;
+}
+div.wpcf7-validation-errors {
+  font-size: 0.8em;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+  padding: 10px;
+  margin: 0;
+}
+div.wpcf7-validation-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+  padding: 10px;
+  margin: 0;
+  font-size: 0.8em;
 }
 .arrow-btn {
   border: 1px #ccc solid;
@@ -884,6 +922,9 @@ span.wpcf7-not-valid-tip {
   /*.button{
         display: table-cell;
     }*/
+}
+.double-btn-container {
+  margin: 30px 0;
 }
 .button {
   position: relative;
